@@ -334,28 +334,23 @@ const header = () => {
 
     /*! появление фона при скролле хотя бы на чуть-чуть */
     if (scroll <= headHeight * 3 && windowWidth >= 768) {
-      console.log(headHeight);
       $('.header__head').css('margin-top', -scroll / 3);
-      /* $('.header').css(
-        'background-color',
-        'rgba(255,255,255,' + scroll / (headHeight * 3) + ')'
-      ); */
       $('.header').removeClass('fixed');
       $('.header__navbar .logo').addClass('logo-hover');
     } else {
       $('.header__head').css('margin-top', -headHeight);
-      // $('.header').css('background-color', 'rgba(255, 255, 255, 255)');
       $('.header').addClass('fixed');
       $('.header__navbar .logo').removeClass('logo-hover');
     }
   });
 
-  //Плавный переход
+  /*! Плавный переход */
   $('.navbar').on('click', 'a', function (e) {
     e.preventDefault();
     let headerTop = $('.header').outerHeight();
     let sc = $(this).attr('href');
-    //Минус высота fixed - header
+
+    /*! Минус высота fixed - header */
     let dn = $(sc).offset().top - headerTop;
     $('html, body').animate(
       { scrollTop: dn },
@@ -406,6 +401,130 @@ const header = () => {
 
 /***/ }),
 
+/***/ "../views/layouts/modal/modal.js":
+/*!***************************************!*\
+  !*** ../views/layouts/modal/modal.js ***!
+  \***************************************/
+/*! exports provided: modal */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "modal", function() { return modal; });
+
+const modal = () => {
+  //функция close
+  const modalClose = () => {
+    $('body, .header, .modal').css('padding-right', 0);
+    $('.header').css('right', 0);
+    $('.modal').removeClass('show');
+    $('html').removeClass('fixed');
+    focusUnlock();
+
+    $('.modal__content').find(':focus').trigger('blur');
+
+    //Переход на предыдущий фокус
+    $('.modal__content').one('transitionend', function () {
+      $(tabMemory).trigger('focus');
+    });
+
+    //Включить запись фокус
+    modalIsOpen = false;
+  };
+
+  //Focus-lock
+  const focusLock = () => {
+    focusElements.prevObject.each(function () {
+      $(this).attr('tabindex', '-1');
+    });
+    focusModalElements.prevObject.each(function () {
+      $(this).attr('tabindex', '0');
+    });
+  };
+
+  //Focus-unlock
+  const focusUnlock = () => {
+    focusElements.prevObject.each(function () {
+      $(this).attr('tabindex', '0');
+    });
+  };
+
+  //focusable элементы
+  let focusElements = $('a[href], button, input, textarea, select').has(
+    'focus'
+  );
+
+  //focusable элементы в modal
+  let focusModalElements = $('.modal__content')
+    .find('a[href], button, input, textarea, select')
+    .has('focus');
+
+  // Инициализация переменных, 1-ый элемент по умолчанию и  модалка не открыта
+  let tabMemory = focusElements.prevObject.first();
+  let modalIsOpen = false;
+
+  //При фокусе запоминаем предыдущый элемент, т.к. модалка открывается текущей кнопкой
+  $('a[href], button, input, textarea, select').on('focusin', function () {
+    if (!modalIsOpen) {
+      tabMemory = $(this);
+    }
+  });
+
+  //открытие модального окна
+  $('button[data-modal]').on('click', function () {
+    let modalName = $(this).attr('data-modal');
+    let body = $('body').width();
+    let scrollWidth = window.innerWidth - body;
+    let headerTop = $('.header').outerHeight();
+
+    //Отменяем запоминание текущего фокуса
+    modalIsOpen = true;
+
+    //Удаление всех tabindex
+    focusLock();
+
+    //Показ модалки
+    $('.modal[data-modal="' + modalName + '"]')
+      .addClass('show')
+      .css('top', headerTop);
+
+    //При смене ширины окна, она будет под header
+    $(window).on('resize', function () {
+      headerTop = $('.header').outerHeight();
+      $('.modal[data-modal="' + modalName + '"]').css('top', headerTop);
+    });
+
+    //Автофокус на ближайщий возможный tabindex
+    $('.modal__content').one('transitionend', function () {
+      $(this).find('[tabindex]:first').trigger('focus');
+    });
+
+    //Фиксируем страницу
+    $('html').addClass('fixed');
+    if (scrollWidth > 0) {
+      $('body, .modal').css('padding-right', scrollWidth);
+      $('.header').css('right', scrollWidth);
+      console.log(scrollWidth);
+    }
+  });
+
+  //Отмена по кнопке "Закрыть" и по фону
+  $('.modal__btn button, .modal-overlay').on('click', function () {
+    modalClose();
+  });
+
+  //Отмена по Esc
+  $(document).on('keydown', function (e) {
+    const keyCode = e.keyCode || e.which;
+    if (keyCode === 27) {
+      modalClose();
+    }
+  });
+};
+
+
+/***/ }),
+
 /***/ "./main.js":
 /*!*****************!*\
   !*** ./main.js ***!
@@ -423,6 +542,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _layouts_header_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @layouts/header/header */ "../views/layouts/header/header.js");
 /* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
 /* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -436,9 +556,10 @@ global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
 
-// import modal from '@layouts/modal/modal';
+
 jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
   Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_3__["header"])();
+  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_6__["modal"])();
   Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__["advantages"])();
   Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["calculate"])();
   Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["liveMap"])();
