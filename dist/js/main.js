@@ -504,7 +504,6 @@ const modal = () => {
     if (scrollWidth > 0) {
       $('body, .modal').css('padding-right', scrollWidth);
       $('.header').css('right', scrollWidth);
-      console.log(scrollWidth);
     }
   });
 

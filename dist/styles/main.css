@@ -676,8 +676,6 @@ h2 {
   position: relative;
   width: 20px;
   height: 20px;
-  -webkit-transition: 0.1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
-  transition: 0.1s cubic-bezier(0.55, 0.06, 0.68, 0.19);
 }
 
 .btn-close::before,
@@ -707,8 +705,6 @@ h2 {
 .btn-close:hover::after,
 .btn-close:focus::before,
 .btn-close:focus::after {
-  -webkit-transform: rotate(0);
-  transform: rotate(0);
   background-color: black;
 }
 
@@ -851,6 +847,9 @@ h2 {
 .calculate__from {
   position: relative;
   border-radius: 2px 0 0 2px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 258px;
+  flex: 1 1 258px;
 }
 
 .calculate__from > svg {
@@ -907,6 +906,12 @@ h2 {
   opacity: 0.8;
 }
 
+.calculate__to {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 258px;
+  flex: 1 1 258px;
+}
+
 .calculate__to svg {
   width: 14px;
   height: 20px;
@@ -934,9 +939,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 258px;
-  flex: 1 1 258px;
+  width: 258px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
