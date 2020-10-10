@@ -845,11 +845,11 @@ h2 {
 }
 
 .calculate__from {
-  position: relative;
-  border-radius: 2px 0 0 2px;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 258px;
   flex: 1 1 258px;
+  position: relative;
+  border-radius: 2px 0 0 2px;
 }
 
 .calculate__from > svg {
@@ -939,13 +939,13 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 258px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  width: 258px;
   height: 100%;
   overflow: hidden;
   padding: 0 35px;
