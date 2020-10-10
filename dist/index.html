@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Транском - транспортная компания</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <!--header-->
+    <div class="head">
+      <header class="header">
+        <div class="container">
+          <div class="header__head">
+                <div class="contacts-block header__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#envelope"></use>
+                    </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#phone"></use>
+                    </svg><span>8 800-125-00-00</span></a>
+                  <select name="Москва"></select>
+                </div>
+            <div class="header__right">
+              <div class="header__login">
+                <svg>
+                  <use href="./img/sprites/sprite.svg#subtract"></use>
+                </svg><span>Личный кабинет</span>
+              </div>
+              <div class="header__buttons">
+                <button class="btn" data-modal="form">Онлайн заявка</button>
+                <button class="btn">Калькулятор</button>
+              </div>
+            </div>
+          </div>
+              <div class="navbar header__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                      <svg>
+                        <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
+                        <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
+                        <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                      </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+                <nav class="navbar__nav">
+                  <ul>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#service">Услуги</a></li>
+                    <li><a href="#tariffs">Тарифы</a></li>
+                    <li><a href="#info">Информация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+        </div>
+      </header>
+      <!--Banner-->
+      <div class="heading">
+        <div class="container">
+          <div class="heading__block">
+            <h1 class="title-h1">Транспортная компания Транс Бизнес Логистик</h1><span class="subtitle">Доставка грузов выделенным автотранспортом</span>
+            <button class="btn-white" data-modal="form">Оставить заявку</button>
+          </div>
+          <div class="calculate">
+            <div class="calculate__form">
+              <label class="calculate__input calculate__from">
+                <svg>
+                  <use href="./img/sprites/sprite.svg#marker"></use>
+                </svg>
+                <div class="relative">
+                  <input type="text" required><span class="placeholder">Откуда</span>
+                </div>
+                <button class="button-swap">
+                  <svg transform="rotate(180)">
+                    <use href="./img/sprites/sprite.svg#arrow"></use>
+                  </svg>
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#arrow"></use>
+                  </svg>
+                </button>
+              </label>
+              <label class="calculate__input calculate__to">
+                <svg>
+                  <use href="./img/sprites/sprite.svg#marker"></use>
+                </svg>
+                <div class="relative">
+                  <input type="text" required><span class="placeholder">Куда</span>
+                </div>
+              </label>
+              <label class="calculate__input calculate__weight">
+                <svg>
+                  <use href="./img/sprites/sprite.svg#weight"></use>
+                </svg>
+                <div class="relative">
+                  <input type="text" required><span class="placeholder">Вес</span>
+                </div><span class="units">Кг</span>
+              </label>
+              <label class="calculate__input calculate__capacity">
+                <svg>
+                  <use href="./img/sprites/sprite.svg#cube"></use>
+                </svg>
+                <div class="relative">
+                  <input type="text" required><span class="placeholder">Обьем</span>
+                </div><span class="units">М&nbsp;<sup>3</sup></span>
+              </label>
+              <button class="calculate__submit"><span>Рассчитать</span>
+                <svg>
+                  <use href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Модалки-->
+    <main>
+      <!--Преимущества-->
+      <div class="advantages">
+        <div class="container">
+          <div class="rf-map">
+            <svg width="454" height="248" viewbox="0 0 454 248" xmlns="http://www.w3.org/2000/svg">
+              <path d="M421.357 0H413.715V7.66954H421.357V0Z" fill="currentColor"></path>
+              <path d="M388.659 10.9017H381.017V18.5712H388.659V10.9017Z" fill="currentColor"></path>
+              <path d="M410.44 10.9017H402.797V18.5712H410.44V10.9017Z" fill="currentColor"></path>
+              <path d="M421.357 10.9017H413.715V18.5712H421.357V10.9017Z" fill="currentColor"></path>
+              <path d="M432.22 10.9017H424.578V18.5712H432.22V10.9017Z" fill="currentColor"></path>
+              <path d="M399.577 21.8582H391.935V29.5277H399.577V21.8582Z" fill="currentColor"></path>
+              <path d="M410.44 21.8582H402.797V29.5277H410.44V21.8582Z" fill="currentColor"></path>
+              <path d="M421.357 21.8582H413.715V29.5277H421.357V21.8582Z" fill="currentColor"></path>
+              <path d="M127.406 32.7599H119.764V40.4294H127.406V32.7599Z" fill="currentColor"></path>
+              <path d="M388.659 32.7599H381.017V40.4294H388.659V32.7599Z" fill="currentColor"></path>
+              <path d="M399.577 32.7599H391.935V40.4294H399.577V32.7599Z" fill="currentColor"></path>
+              <path d="M410.44 32.7599H402.797V40.4294H410.44V32.7599Z" fill="currentColor"></path>
+              <path d="M421.357 32.7599H413.715V40.4294H421.357V32.7599Z" fill="currentColor"></path>
+              <path d="M432.22 32.7599H424.578V40.4294H432.22V32.7599Z" fill="currentColor"></path>
+              <path d="M116.489 43.7164H108.846V51.3859H116.489V43.7164Z" fill="currentColor"></path>
+              <path d="M127.406 43.7164H119.764V51.3859H127.406V43.7164Z" fill="currentColor"></path>
+              <path d="M138.269 43.7164H130.627V51.3859H138.269V43.7164Z" fill="currentColor"></path>
+              <path d="M258.033 43.7164H250.391V51.3859H258.033V43.7164Z" fill="currentColor"></path>
+              <path d="M334.236 43.7164H326.594V51.3859H334.236V43.7164Z" fill="currentColor"></path>
+              <path d="M388.659 43.7164H381.017V51.3859H388.659V43.7164Z" fill="currentColor"></path>
+              <path d="M399.577 43.7164H391.935V51.3859H399.577V43.7164Z" fill="currentColor"></path>
+              <path d="M410.44 43.7164H402.797V51.3859H410.44V43.7164Z" fill="currentColor"></path>
+              <path d="M421.357 43.7164H413.715V51.3859H421.357V43.7164Z" fill="currentColor"></path>
+              <path d="M432.22 43.7164H424.578V51.3859H432.22V43.7164Z" fill="currentColor"></path>
+              <path d="M105.626 54.618H97.9836V62.2876H105.626V54.618Z" fill="currentColor"></path>
+              <path d="M116.489 54.618H108.846V62.2876H116.489V54.618Z" fill="currentColor"></path>
+              <path d="M127.406 54.618H119.764V62.2876H127.406V54.618Z" fill="currentColor"></path>
+              <path d="M138.269 54.618H130.627V62.2876H138.269V54.618Z" fill="currentColor"></path>
+              <path d="M181.829 54.618H174.187V62.2876H181.829V54.618Z" fill="currentColor"></path>
+              <path d="M192.692 54.618H185.05V62.2876H192.692V54.618Z" fill="currentColor"></path>
+              <path d="M203.609 54.618H195.967V62.2876H203.609V54.618Z" fill="currentColor"></path>
+              <path d="M214.472 54.618H206.83V62.2876H214.472V54.618Z" fill="currentColor"></path>
+              <path d="M258.033 54.618H250.391V62.2876H258.033V54.618Z" fill="currentColor"></path>
+              <path d="M268.95 54.618H261.308V62.2876H268.95V54.618Z" fill="currentColor"></path>
+              <path d="M323.373 54.618H315.731V62.2876H323.373V54.618Z" fill="currentColor"></path>
+              <path d="M366.879 54.618H359.237V62.2876H366.879V54.618Z" fill="currentColor"></path>
+              <path d="M377.797 54.618H370.154V62.2876H377.797V54.618Z" fill="currentColor"></path>
+              <path d="M388.659 54.618H381.017V62.2876H388.659V54.618Z" fill="currentColor"></path>
+              <path d="M399.577 54.618H391.935V62.2876H399.577V54.618Z" fill="currentColor"></path>
+              <path d="M410.44 54.618H402.797V62.2876H410.44V54.618Z" fill="currentColor"></path>
+              <path d="M421.357 54.618H413.715V62.2876H421.357V54.618Z" fill="currentColor"></path>
+              <path d="M432.22 54.618H424.578V62.2876H432.22V54.618Z" fill="currentColor"></path>
+              <path d="M62.0654 65.5746H54.4232V73.2441H62.0654V65.5746Z" fill="currentColor"></path>
+              <path d="M72.9828 65.5746H65.3406V73.2441H72.9828V65.5746Z" fill="currentColor"></path>
+              <path d="M83.8456 65.5746H76.2034V73.2441H83.8456V65.5746Z" fill="currentColor"></path>
+              <path d="M94.7084 65.5746H87.0663V73.2441H94.7084V65.5746Z" fill="currentColor"></path>
+              <path d="M105.626 65.5746H97.9836V73.2441H105.626V65.5746Z" fill="currentColor"></path>
+              <path d="M116.489 65.5746H108.846V73.2441H116.489V65.5746Z" fill="currentColor"></path>
+              <path d="M127.406 65.5746H119.764V73.2441H127.406V65.5746Z" fill="currentColor"></path>
+              <path d="M138.269 65.5746H130.627V73.2441H138.269V65.5746Z" fill="currentColor"></path>
+              <path d="M149.186 65.5746H141.544V73.2441H149.186V65.5746Z" fill="currentColor"></path>
+              <path d="M170.966 65.5746H163.324V73.2441H170.966V65.5746Z" fill="currentColor"></path>
+              <path d="M181.829 65.5746H174.187V73.2441H181.829V65.5746Z" fill="currentColor"></path>
+              <path d="M268.95 65.5746H261.308V73.2441H268.95V65.5746Z" fill="currentColor"></path>
+              <path d="M279.813 65.5746H272.171V73.2441H279.813V65.5746Z" fill="currentColor"></path>
+              <path d="M334.236 65.5746H326.594V73.2441H334.236V65.5746Z" fill="currentColor"></path>
+              <path d="M345.154 65.5746H337.511V73.2441H345.154V65.5746Z" fill="currentColor"></path>
+              <path d="M356.016 65.5746H348.374V73.2441H356.016V65.5746Z" fill="currentColor"></path>
+              <path d="M366.879 65.5746H359.237V73.2441H366.879V65.5746Z" fill="currentColor"></path>
+              <path d="M377.797 65.5746H370.154V73.2441H377.797V65.5746Z" fill="currentColor"></path>
+              <path d="M388.659 65.5746H381.017V73.2441H388.659V65.5746Z" fill="currentColor"></path>
+              <path d="M399.577 65.5746H391.935V73.2441H399.577V65.5746Z" fill="currentColor"></path>
+              <path d="M410.44 65.5746H402.797V73.2441H410.44V65.5746Z" fill="currentColor"></path>
+              <path d="M421.357 65.5746H413.715V73.2441H421.357V65.5746Z" fill="currentColor"></path>
+              <path d="M432.22 65.5746H424.578V73.2441H432.22V65.5746Z" fill="currentColor"></path>
+              <path d="M62.0654 76.4763H54.4232V84.1458H62.0654V76.4763Z" fill="currentColor"></path>
+              <path d="M72.9828 76.4763H65.3406V84.1458H72.9828V76.4763Z" fill="currentColor"></path>
+              <path d="M83.8456 76.4763H76.2034V84.1458H83.8456V76.4763Z" fill="currentColor"></path>
+              <path d="M94.7084 76.4763H87.0663V84.1458H94.7084V76.4763Z" fill="currentColor"></path>
+              <path d="M105.626 76.4763H97.9836V84.1458H105.626V76.4763Z" fill="currentColor"></path>
+              <path d="M116.489 76.4763H108.846V84.1458H116.489V76.4763Z" fill="currentColor"></path>
+              <path d="M127.406 76.4763H119.764V84.1458H127.406V76.4763Z" fill="currentColor"></path>
+              <path d="M138.269 76.4763H130.627V84.1458H138.269V76.4763Z" fill="currentColor"></path>
+              <path d="M149.186 76.4763H141.544V84.1458H149.186V76.4763Z" fill="currentColor"></path>
+              <path d="M160.049 76.4763H152.407V84.1458H160.049V76.4763Z" fill="currentColor"></path>
+              <path d="M203.609 76.4763H195.967V84.1458H203.609V76.4763Z" fill="currentColor"></path>
+              <path d="M236.253 76.4763H228.61V84.1458H236.253V76.4763Z" fill="currentColor"></path>
+              <path d="M247.17 76.4763H239.528V84.1458H247.17V76.4763Z" fill="currentColor"></path>
+              <path d="M258.033 76.4763H250.391V84.1458H258.033V76.4763Z" fill="currentColor"></path>
+              <path d="M268.95 76.4763H261.308V84.1458H268.95V76.4763Z" fill="currentColor"></path>
+              <path d="M279.813 76.4763H272.171V84.1458H279.813V76.4763Z" fill="currentColor"></path>
+              <path d="M301.593 76.4763H293.951V84.1458H301.593V76.4763Z" fill="currentColor"></path>
+              <path d="M312.456 76.4763H304.814V84.1458H312.456V76.4763Z" fill="currentColor"></path>
+              <path d="M334.236 76.4763H326.594V84.1458H334.236V76.4763Z" fill="currentColor"></path>
+              <path d="M345.154 76.4763H337.511V84.1458H345.154V76.4763Z" fill="currentColor"></path>
+              <path d="M356.016 76.4763H348.374V84.1458H356.016V76.4763Z" fill="currentColor"></path>
+              <path d="M366.879 76.4763H359.237V84.1458H366.879V76.4763Z" fill="currentColor"></path>
+              <path d="M377.797 76.4763H370.154V84.1458H377.797V76.4763Z" fill="currentColor"></path>
+              <path d="M388.659 76.4763H381.017V84.1458H388.659V76.4763Z" fill="currentColor"></path>
+              <path d="M399.577 76.4763H391.935V84.1458H399.577V76.4763Z" fill="currentColor"></path>
+              <path d="M410.44 76.4763H402.797V84.1458H410.44V76.4763Z" fill="currentColor"></path>
+              <path d="M421.357 76.4763H413.715V84.1458H421.357V76.4763Z" fill="currentColor"></path>
+              <path d="M432.22 76.4763H424.578V84.1458H432.22V76.4763Z" fill="currentColor"></path>
+              <path d="M51.2026 87.4327H43.5604V95.1023H51.2026V87.4327Z" fill="currentColor"></path>
+              <path d="M62.0654 87.4327H54.4232V95.1023H62.0654V87.4327Z" fill="currentColor"></path>
+              <path d="M72.9828 87.4327H65.3406V95.1023H72.9828V87.4327Z" fill="currentColor"></path>
+              <path d="M83.8456 87.4327H76.2034V95.1023H83.8456V87.4327Z" fill="currentColor"></path>
+              <path d="M94.7084 87.4327H87.0663V95.1023H94.7084V87.4327Z" fill="currentColor"></path>
+              <path d="M105.626 87.4327H97.9836V95.1023H105.626V87.4327Z" fill="currentColor"></path>
+              <path d="M116.489 87.4327H108.846V95.1023H116.489V87.4327Z" fill="currentColor"></path>
+              <path d="M127.406 87.4327H119.764V95.1023H127.406V87.4327Z" fill="currentColor"></path>
+              <path d="M138.269 87.4327H130.627V95.1023H138.269V87.4327Z" fill="currentColor"></path>
+              <path d="M149.186 87.4327H141.544V95.1023H149.186V87.4327Z" fill="currentColor"></path>
+              <path d="M160.049 87.4327H152.407V95.1023H160.049V87.4327Z" fill="currentColor"></path>
+              <path d="M170.966 87.4327H163.324V95.1023H170.966V87.4327Z" fill="currentColor"></path>
+              <path d="M181.829 87.4327H174.187V95.1023H181.829V87.4327Z" fill="currentColor"></path>
+              <path d="M192.692 87.4327H185.05V95.1023H192.692V87.4327Z" fill="currentColor"></path>
+              <path d="M203.609 87.4327H195.967V95.1023H203.609V87.4327Z" fill="currentColor"></path>
+              <path d="M214.472 87.4327H206.83V95.1023H214.472V87.4327Z" fill="currentColor"></path>
+              <path d="M225.39 87.4327H217.748V95.1023H225.39V87.4327Z" fill="currentColor"></path>
+              <path d="M236.253 87.4327H228.61V95.1023H236.253V87.4327Z" fill="currentColor"></path>
+              <path d="M247.17 87.4327H239.528V95.1023H247.17V87.4327Z" fill="currentColor"></path>
+              <path d="M258.033 87.4327H250.391V95.1023H258.033V87.4327Z" fill="currentColor"></path>
+              <path d="M268.95 87.4327H261.308V95.1023H268.95V87.4327Z" fill="currentColor"></path>
+              <path d="M279.813 87.4327H272.171V95.1023H279.813V87.4327Z" fill="currentColor"></path>
+              <path d="M290.676 87.4327H283.034V95.1023H290.676V87.4327Z" fill="currentColor"></path>
+              <path d="M301.593 87.4327H293.951V95.1023H301.593V87.4327Z" fill="currentColor"></path>
+              <path d="M312.456 87.4327H304.814V95.1023H312.456V87.4327Z" fill="currentColor"></path>
+              <path d="M323.373 87.4327H315.731V95.1023H323.373V87.4327Z" fill="currentColor"></path>
+              <path d="M334.236 87.4327H326.594V95.1023H334.236V87.4327Z" fill="currentColor"></path>
+              <path d="M345.154 87.4327H337.511V95.1023H345.154V87.4327Z" fill="currentColor"></path>
+              <path d="M356.016 87.4327H348.374V95.1023H356.016V87.4327Z" fill="currentColor"></path>
+              <path d="M366.879 87.4327H359.237V95.1023H366.879V87.4327Z" fill="currentColor"></path>
+              <path d="M377.797 87.4327H370.154V95.1023H377.797V87.4327Z" fill="currentColor"></path>
+              <path d="M388.659 87.4327H381.017V95.1023H388.659V87.4327Z" fill="currentColor"></path>
+              <path d="M399.577 87.4327H391.935V95.1023H399.577V87.4327Z" fill="currentColor"></path>
+              <path d="M410.44 87.4327H402.797V95.1023H410.44V87.4327Z" fill="currentColor"></path>
+              <path d="M432.22 87.4327H424.578V95.1023H432.22V87.4327Z" fill="currentColor"></path>
+              <path d="M40.2852 98.3344H32.643V106.004H40.2852V98.3344Z" fill="currentColor"></path>
+              <path d="M51.2026 98.3344H43.5604V106.004H51.2026V98.3344Z" fill="currentColor"></path>
+              <path d="M62.0654 98.3344H54.4232V106.004H62.0654V98.3344Z" fill="currentColor"></path>
+              <path d="M72.9828 98.3344H65.3406V106.004H72.9828V98.3344Z" fill="currentColor"></path>
+              <path d="M83.8456 98.3344H76.2034V106.004H83.8456V98.3344Z" fill="currentColor"></path>
+              <path d="M94.7084 98.3344H87.0663V106.004H94.7084V98.3344Z" fill="currentColor"></path>
+              <path d="M105.626 98.3344H97.9836V106.004H105.626V98.3344Z" fill="currentColor"></path>
+              <path d="M116.489 98.3344H108.846V106.004H116.489V98.3344Z" fill="currentColor"></path>
+              <path d="M127.406 98.3344H119.764V106.004H127.406V98.3344Z" fill="currentColor"></path>
+              <path d="M138.269 98.3344H130.627V106.004H138.269V98.3344Z" fill="currentColor"></path>
+              <path d="M149.186 98.3344H141.544V106.004H149.186V98.3344Z" fill="currentColor"></path>
+              <path d="M160.049 98.3344H152.407V106.004H160.049V98.3344Z" fill="currentColor"></path>
+              <path d="M170.966 98.3344H163.324V106.004H170.966V98.3344Z" fill="currentColor"></path>
+              <path d="M181.829 98.3344H174.187V106.004H181.829V98.3344Z" fill="currentColor"></path>
+              <path d="M192.692 98.3344H185.05V106.004H192.692V98.3344Z" fill="currentColor"></path>
+              <path d="M203.609 98.3344H195.967V106.004H203.609V98.3344Z" fill="currentColor"></path>
+              <path d="M214.472 98.3344H206.83V106.004H214.472V98.3344Z" fill="currentColor"></path>
+              <path d="M225.39 98.3344H217.748V106.004H225.39V98.3344Z" fill="currentColor"></path>
+              <path d="M236.253 98.3344H228.61V106.004H236.253V98.3344Z" fill="currentColor"></path>
+              <path d="M247.17 98.3344H239.528V106.004H247.17V98.3344Z" fill="currentColor"></path>
+              <path d="M258.033 98.3344H250.391V106.004H258.033V98.3344Z" fill="currentColor"></path>
+              <path d="M268.95 98.3344H261.308V106.004H268.95V98.3344Z" fill="currentColor"></path>
+              <path d="M279.813 98.3344H272.171V106.004H279.813V98.3344Z" fill="currentColor"></path>
+              <path d="M290.676 98.3344H283.034V106.004H290.676V98.3344Z" fill="currentColor"></path>
+              <path d="M301.593 98.3344H293.951V106.004H301.593V98.3344Z" fill="currentColor"></path>
+              <path d="M312.456 98.3344H304.814V106.004H312.456V98.3344Z" fill="currentColor"></path>
+              <path d="M323.373 98.3344H315.731V106.004H323.373V98.3344Z" fill="currentColor"></path>
+              <path d="M334.236 98.3344H326.594V106.004H334.236V98.3344Z" fill="currentColor"></path>
+              <path d="M345.154 98.3344H337.511V106.004H345.154V98.3344Z" fill="currentColor"></path>
+              <path d="M356.016 98.3344H348.374V106.004H356.016V98.3344Z" fill="currentColor"></path>
+              <path d="M366.879 98.3344H359.237V106.004H366.879V98.3344Z" fill="currentColor"></path>
+              <path d="M377.797 98.3344H370.154V106.004H377.797V98.3344Z" fill="currentColor"></path>
+              <path d="M388.659 98.3344H381.017V106.004H388.659V98.3344Z" fill="currentColor"></path>
+              <path d="M399.577 98.3344H391.935V106.004H399.577V98.3344Z" fill="currentColor"></path>
+              <path d="M410.44 98.3344H402.797V106.004H410.44V98.3344Z" fill="currentColor"></path>
+              <path d="M432.22 98.3344H424.578V106.004H432.22V98.3344Z" fill="currentColor"></path>
+              <path d="M443.137 98.3344H435.495V106.004H443.137V98.3344Z" fill="currentColor"></path>
+              <path d="M40.2852 109.236H32.643V116.906H40.2852V109.236Z" fill="currentColor"></path>
+              <path d="M51.2026 109.236H43.5604V116.906H51.2026V109.236Z" fill="currentColor"></path>
+              <path d="M62.0654 109.236H54.4232V116.906H62.0654V109.236Z" fill="currentColor"></path>
+              <path d="M72.9828 109.236H65.3406V116.906H72.9828V109.236Z" fill="currentColor"></path>
+              <path d="M83.8456 109.236H76.2034V116.906H83.8456V109.236Z" fill="currentColor"></path>
+              <path d="M94.7084 109.236H87.0663V116.906H94.7084V109.236Z" fill="currentColor"></path>
+              <path d="M105.626 109.236H97.9836V116.906H105.626V109.236Z" fill="currentColor"></path>
+              <path d="M116.489 109.236H108.846V116.906H116.489V109.236Z" fill="currentColor"></path>
+              <path d="M127.406 109.236H119.764V116.906H127.406V109.236Z" fill="currentColor"></path>
+              <path d="M138.269 109.236H130.627V116.906H138.269V109.236Z" fill="currentColor"></path>
+              <path d="M149.186 109.236H141.544V116.906H149.186V109.236Z" fill="currentColor"></path>
+              <path d="M160.049 109.236H152.407V116.906H160.049V109.236Z" fill="currentColor"></path>
+              <path d="M170.966 109.236H163.324V116.906H170.966V109.236Z" fill="currentColor"></path>
+              <path d="M181.829 109.236H174.187V116.906H181.829V109.236Z" fill="currentColor"></path>
+              <path d="M192.692 109.236H185.05V116.906H192.692V109.236Z" fill="currentColor"></path>
+              <path d="M203.609 109.236H195.967V116.906H203.609V109.236Z" fill="currentColor"></path>
+              <path d="M214.472 109.236H206.83V116.906H214.472V109.236Z" fill="currentColor"></path>
+              <path d="M225.39 109.236H217.748V116.906H225.39V109.236Z" fill="currentColor"></path>
+              <path d="M236.253 109.236H228.61V116.906H236.253V109.236Z" fill="currentColor"></path>
+              <path d="M247.17 109.236H239.528V116.906H247.17V109.236Z" fill="currentColor"></path>
+              <path d="M258.033 109.236H250.391V116.906H258.033V109.236Z" fill="currentColor"></path>
+              <path d="M268.95 109.236H261.308V116.906H268.95V109.236Z" fill="currentColor"></path>
+              <path d="M279.813 109.236H272.171V116.906H279.813V109.236Z" fill="currentColor"></path>
+              <path d="M290.676 109.236H283.034V116.906H290.676V109.236Z" fill="currentColor"></path>
+              <path d="M301.593 109.236H293.951V116.906H301.593V109.236Z" fill="currentColor"></path>
+              <path d="M312.456 109.236H304.814V116.906H312.456V109.236Z" fill="currentColor"></path>
+              <path d="M323.373 109.236H315.731V116.906H323.373V109.236Z" fill="currentColor"></path>
+              <path d="M334.236 109.236H326.594V116.906H334.236V109.236Z" fill="currentColor"></path>
+              <path d="M345.154 109.236H337.511V116.906H345.154V109.236Z" fill="currentColor"></path>
+              <path d="M356.016 109.236H348.374V116.906H356.016V109.236Z" fill="currentColor"></path>
+              <path d="M366.879 109.236H359.237V116.906H366.879V109.236Z" fill="currentColor"></path>
+              <path d="M377.797 109.236H370.154V116.906H377.797V109.236Z" fill="currentColor"></path>
+              <path d="M388.659 109.236H381.017V116.906H388.659V109.236Z" fill="currentColor"></path>
+              <path d="M399.577 109.236H391.935V116.906H399.577V109.236Z" fill="currentColor"></path>
+              <path d="M410.44 109.236H402.797V116.906H410.44V109.236Z" fill="currentColor"></path>
+              <path d="M432.22 109.236H424.578V116.906H432.22V109.236Z" fill="currentColor"></path>
+              <path d="M443.137 109.236H435.495V116.906H443.137V109.236Z" fill="currentColor"></path>
+              <path d="M7.64218 120.193H0V127.862H7.64218V120.193Z" fill="currentColor"></path>
+              <path d="M40.2852 120.193H32.643V127.862H40.2852V120.193Z" fill="currentColor"></path>
+              <path d="M51.2026 120.193H43.5604V127.862H51.2026V120.193Z" fill="currentColor"></path>
+              <path d="M62.0654 120.193H54.4232V127.862H62.0654V120.193Z" fill="currentColor"></path>
+              <path d="M72.9828 120.193H65.3406V127.862H72.9828V120.193Z" fill="currentColor"></path>
+              <path d="M83.8456 120.193H76.2034V127.862H83.8456V120.193Z" fill="currentColor"></path>
+              <path d="M94.7084 120.193H87.0663V127.862H94.7084V120.193Z" fill="currentColor"></path>
+              <path d="M105.626 120.193H97.9836V127.862H105.626V120.193Z" fill="currentColor"></path>
+              <path d="M116.489 120.193H108.846V127.862H116.489V120.193Z" fill="currentColor"></path>
+              <path d="M127.406 120.193H119.764V127.862H127.406V120.193Z" fill="currentColor"></path>
+              <path d="M138.269 120.193H130.627V127.862H138.269V120.193Z" fill="currentColor"></path>
+              <path d="M149.186 120.193H141.544V127.862H149.186V120.193Z" fill="currentColor"></path>
+              <path d="M160.049 120.193H152.407V127.862H160.049V120.193Z" fill="currentColor"></path>
+              <path d="M170.966 120.193H163.324V127.862H170.966V120.193Z" fill="currentColor"></path>
+              <path d="M181.829 120.193H174.187V127.862H181.829V120.193Z" fill="currentColor"></path>
+              <path d="M192.692 120.193H185.05V127.862H192.692V120.193Z" fill="currentColor"></path>
+              <path d="M203.609 120.193H195.967V127.862H203.609V120.193Z" fill="currentColor"></path>
+              <path d="M214.472 120.193H206.83V127.862H214.472V120.193Z" fill="currentColor"></path>
+              <path d="M225.39 120.193H217.748V127.862H225.39V120.193Z" fill="currentColor"></path>
+              <path d="M236.253 120.193H228.61V127.862H236.253V120.193Z" fill="currentColor"></path>
+              <path d="M247.17 120.193H239.528V127.862H247.17V120.193Z" fill="currentColor"></path>
+              <path d="M258.033 120.193H250.391V127.862H258.033V120.193Z" fill="currentColor"></path>
+              <path d="M268.95 120.193H261.308V127.862H268.95V120.193Z" fill="currentColor"></path>
+              <path d="M279.813 120.193H272.171V127.862H279.813V120.193Z" fill="currentColor"></path>
+              <path d="M290.676 120.193H283.034V127.862H290.676V120.193Z" fill="currentColor"></path>
+              <path d="M301.593 120.193H293.951V127.862H301.593V120.193Z" fill="currentColor"></path>
+              <path d="M312.456 120.193H304.814V127.862H312.456V120.193Z" fill="currentColor"></path>
+              <path d="M323.373 120.193H315.731V127.862H323.373V120.193Z" fill="currentColor"></path>
+              <path d="M334.236 120.193H326.594V127.862H334.236V120.193Z" fill="currentColor"></path>
+              <path d="M345.154 120.193H337.511V127.862H345.154V120.193Z" fill="currentColor"></path>
+              <path d="M356.016 120.193H348.374V127.862H356.016V120.193Z" fill="currentColor"></path>
+              <path d="M366.879 120.193H359.237V127.862H366.879V120.193Z" fill="currentColor"></path>
+              <path d="M377.797 120.193H370.154V127.862H377.797V120.193Z" fill="currentColor"></path>
+              <path d="M388.659 120.193H381.017V127.862H388.659V120.193Z" fill="currentColor"></path>
+              <path d="M399.577 120.193H391.935V127.862H399.577V120.193Z" fill="currentColor"></path>
+              <path d="M432.22 120.193H424.578V127.862H432.22V120.193Z" fill="currentColor"></path>
+              <path d="M443.137 120.193H435.495V127.862H443.137V120.193Z" fill="currentColor"></path>
+              <path d="M454 120.193H446.358V127.862H454V120.193Z" fill="currentColor"></path>
+              <path d="M7.64218 131.094H0V138.764H7.64218V131.094Z" fill="currentColor"></path>
+              <path d="M18.505 131.094H10.8628V138.764H18.505V131.094Z" fill="currentColor"></path>
+              <path d="M51.2026 131.094H43.5604V138.764H51.2026V131.094Z" fill="currentColor"></path>
+              <path d="M62.0654 131.094H54.4232V138.764H62.0654V131.094Z" fill="currentColor"></path>
+              <path d="M72.9828 131.094H65.3406V138.764H72.9828V131.094Z" fill="currentColor"></path>
+              <path d="M83.8456 131.094H76.2034V138.764H83.8456V131.094Z" fill="currentColor"></path>
+              <path d="M94.7084 131.094H87.0663V138.764H94.7084V131.094Z" fill="currentColor"></path>
+              <path d="M105.626 131.094H97.9836V138.764H105.626V131.094Z" fill="currentColor"></path>
+              <path d="M116.489 131.094H108.846V138.764H116.489V131.094Z" fill="currentColor"></path>
+              <path d="M127.406 131.094H119.764V138.764H127.406V131.094Z" fill="currentColor"></path>
+              <path d="M138.269 131.094H130.627V138.764H138.269V131.094Z" fill="currentColor"></path>
+              <path d="M149.186 131.094H141.544V138.764H149.186V131.094Z" fill="currentColor"></path>
+              <path d="M160.049 131.094H152.407V138.764H160.049V131.094Z" fill="currentColor"></path>
+              <path d="M170.966 131.094H163.324V138.764H170.966V131.094Z" fill="currentColor"></path>
+              <path d="M181.829 131.094H174.187V138.764H181.829V131.094Z" fill="currentColor"></path>
+              <path d="M192.692 131.094H185.05V138.764H192.692V131.094Z" fill="currentColor"></path>
+              <path d="M203.609 131.094H195.967V138.764H203.609V131.094Z" fill="currentColor"></path>
+              <path d="M214.472 131.094H206.83V138.764H214.472V131.094Z" fill="currentColor"></path>
+              <path d="M225.39 131.094H217.748V138.764H225.39V131.094Z" fill="currentColor"></path>
+              <path d="M236.253 131.094H228.61V138.764H236.253V131.094Z" fill="currentColor"></path>
+              <path d="M247.17 131.094H239.528V138.764H247.17V131.094Z" fill="currentColor"></path>
+              <path d="M258.033 131.094H250.391V138.764H258.033V131.094Z" fill="currentColor"></path>
+              <path d="M268.95 131.094H261.308V138.764H268.95V131.094Z" fill="currentColor"></path>
+              <path d="M279.813 131.094H272.171V138.764H279.813V131.094Z" fill="currentColor"></path>
+              <path d="M290.676 131.094H283.034V138.764H290.676V131.094Z" fill="currentColor"></path>
+              <path d="M301.593 131.094H293.951V138.764H301.593V131.094Z" fill="currentColor"></path>
+              <path d="M312.456 131.094H304.814V138.764H312.456V131.094Z" fill="currentColor"></path>
+              <path d="M323.373 131.094H315.731V138.764H323.373V131.094Z" fill="currentColor"></path>
+              <path d="M334.236 131.094H326.594V138.764H334.236V131.094Z" fill="currentColor"></path>
+              <path d="M345.154 131.094H337.511V138.764H345.154V131.094Z" fill="currentColor"></path>
+              <path d="M356.016 131.094H348.374V138.764H356.016V131.094Z" fill="currentColor"></path>
+              <path d="M366.879 131.094H359.237V138.764H366.879V131.094Z" fill="currentColor"></path>
+              <path d="M377.797 131.094H370.154V138.764H377.797V131.094Z" fill="currentColor"></path>
+              <path d="M388.659 131.094H381.017V138.764H388.659V131.094Z" fill="currentColor"></path>
+              <path d="M443.137 131.094H435.495V138.764H443.137V131.094Z" fill="currentColor"></path>
+              <path d="M454 131.094H446.358V138.764H454V131.094Z" fill="currentColor"></path>
+              <path d="M18.505 142.051H10.8628V149.72H18.505V142.051Z" fill="currentColor"></path>
+              <path d="M29.4224 142.051H21.7802V149.72H29.4224V142.051Z" fill="currentColor"></path>
+              <path d="M40.2852 142.051H32.643V149.72H40.2852V142.051Z" fill="currentColor"></path>
+              <path d="M51.2026 142.051H43.5604V149.72H51.2026V142.051Z" fill="currentColor"></path>
+              <path d="M62.0654 142.051H54.4232V149.72H62.0654V142.051Z" fill="currentColor"></path>
+              <path d="M72.9828 142.051H65.3406V149.72H72.9828V142.051Z" fill="currentColor"></path>
+              <path d="M83.8456 142.051H76.2034V149.72H83.8456V142.051Z" fill="currentColor"></path>
+              <path d="M94.7084 142.051H87.0663V149.72H94.7084V142.051Z" fill="currentColor"></path>
+              <path d="M105.626 142.051H97.9836V149.72H105.626V142.051Z" fill="currentColor"></path>
+              <path d="M116.489 142.051H108.846V149.72H116.489V142.051Z" fill="currentColor"></path>
+              <path d="M127.406 142.051H119.764V149.72H127.406V142.051Z" fill="currentColor"></path>
+              <path d="M138.269 142.051H130.627V149.72H138.269V142.051Z" fill="currentColor"></path>
+              <path d="M149.186 142.051H141.544V149.72H149.186V142.051Z" fill="currentColor"></path>
+              <path d="M160.049 142.051H152.407V149.72H160.049V142.051Z" fill="currentColor"></path>
+              <path d="M170.966 142.051H163.324V149.72H170.966V142.051Z" fill="currentColor"></path>
+              <path d="M181.829 142.051H174.187V149.72H181.829V142.051Z" fill="currentColor"></path>
+              <path d="M192.692 142.051H185.05V149.72H192.692V142.051Z" fill="currentColor"></path>
+              <path d="M203.609 142.051H195.967V149.72H203.609V142.051Z" fill="currentColor"></path>
+              <path d="M214.472 142.051H206.83V149.72H214.472V142.051Z" fill="currentColor"></path>
+              <path d="M225.39 142.051H217.748V149.72H225.39V142.051Z" fill="currentColor"></path>
+              <path d="M236.253 142.051H228.61V149.72H236.253V142.051Z" fill="currentColor"></path>
+              <path d="M247.17 142.051H239.528V149.72H247.17V142.051Z" fill="currentColor"></path>
+              <path d="M258.033 142.051H250.391V149.72H258.033V142.051Z" fill="currentColor"></path>
+              <path d="M268.95 142.051H261.308V149.72H268.95V142.051Z" fill="currentColor"></path>
+              <path d="M279.813 142.051H272.171V149.72H279.813V142.051Z" fill="currentColor"></path>
+              <path d="M290.676 142.051H283.034V149.72H290.676V142.051Z" fill="currentColor"></path>
+              <path d="M301.593 142.051H293.951V149.72H301.593V142.051Z" fill="currentColor"></path>
+              <path d="M312.456 142.051H304.814V149.72H312.456V142.051Z" fill="currentColor"></path>
+              <path d="M323.373 142.051H315.731V149.72H323.373V142.051Z" fill="currentColor"></path>
+              <path d="M334.236 142.051H326.594V149.72H334.236V142.051Z" fill="currentColor"></path>
+              <path d="M345.154 142.051H337.511V149.72H345.154V142.051Z" fill="currentColor"></path>
+              <path d="M356.016 142.051H348.374V149.72H356.016V142.051Z" fill="currentColor"></path>
+              <path d="M366.879 142.051H359.237V149.72H366.879V142.051Z" fill="currentColor"></path>
+              <path d="M377.797 142.051H370.154V149.72H377.797V142.051Z" fill="currentColor"></path>
+              <path d="M18.505 152.953H10.8628V160.622H18.505V152.953Z" fill="currentColor"></path>
+              <path d="M29.4224 152.953H21.7802V160.622H29.4224V152.953Z" fill="currentColor"></path>
+              <path d="M40.2852 152.953H32.643V160.622H40.2852V152.953Z" fill="currentColor"></path>
+              <path d="M51.2026 152.953H43.5604V160.622H51.2026V152.953Z" fill="currentColor"></path>
+              <path d="M62.0654 152.953H54.4232V160.622H62.0654V152.953Z" fill="currentColor"></path>
+              <path d="M72.9828 152.953H65.3406V160.622H72.9828V152.953Z" fill="currentColor"></path>
+              <path d="M83.8456 152.953H76.2034V160.622H83.8456V152.953Z" fill="currentColor"></path>
+              <path d="M94.7084 152.953H87.0663V160.622H94.7084V152.953Z" fill="currentColor"></path>
+              <path d="M105.626 152.953H97.9836V160.622H105.626V152.953Z" fill="currentColor"></path>
+              <path d="M116.489 152.953H108.846V160.622H116.489V152.953Z" fill="currentColor"></path>
+              <path d="M127.406 152.953H119.764V160.622H127.406V152.953Z" fill="currentColor"></path>
+              <path d="M138.269 152.953H130.627V160.622H138.269V152.953Z" fill="currentColor"></path>
+              <path d="M149.186 152.953H141.544V160.622H149.186V152.953Z" fill="currentColor"></path>
+              <path d="M160.049 152.953H152.407V160.622H160.049V152.953Z" fill="currentColor"></path>
+              <path d="M170.966 152.953H163.324V160.622H170.966V152.953Z" fill="currentColor"></path>
+              <path d="M181.829 152.953H174.187V160.622H181.829V152.953Z" fill="currentColor"></path>
+              <path d="M192.692 152.953H185.05V160.622H192.692V152.953Z" fill="currentColor"></path>
+              <path d="M203.609 152.953H195.967V160.622H203.609V152.953Z" fill="currentColor"></path>
+              <path d="M214.472 152.953H206.83V160.622H214.472V152.953Z" fill="currentColor"></path>
+              <path d="M225.39 152.953H217.748V160.622H225.39V152.953Z" fill="currentColor"></path>
+              <path d="M236.253 152.953H228.61V160.622H236.253V152.953Z" fill="currentColor"></path>
+              <path d="M247.17 152.953H239.528V160.622H247.17V152.953Z" fill="currentColor"></path>
+              <path d="M258.033 152.953H250.391V160.622H258.033V152.953Z" fill="currentColor"></path>
+              <path d="M268.95 152.953H261.308V160.622H268.95V152.953Z" fill="currentColor"></path>
+              <path d="M279.813 152.953H272.171V160.622H279.813V152.953Z" fill="currentColor"></path>
+              <path d="M290.676 152.953H283.034V160.622H290.676V152.953Z" fill="currentColor"></path>
+              <path d="M301.593 152.953H293.951V160.622H301.593V152.953Z" fill="currentColor"></path>
+              <path d="M312.456 152.953H304.814V160.622H312.456V152.953Z" fill="currentColor"></path>
+              <path d="M323.373 152.953H315.731V160.622H323.373V152.953Z" fill="currentColor"></path>
+              <path d="M334.236 152.953H326.594V160.622H334.236V152.953Z" fill="currentColor"></path>
+              <path d="M345.154 152.953H337.511V160.622H345.154V152.953Z" fill="currentColor"></path>
+              <path d="M356.016 152.953H348.374V160.622H356.016V152.953Z" fill="currentColor"></path>
+              <path d="M366.879 152.953H359.237V160.622H366.879V152.953Z" fill="currentColor"></path>
+              <path d="M377.797 152.953H370.154V160.622H377.797V152.953Z" fill="currentColor"></path>
+              <path d="M18.505 163.909H10.8628V171.579H18.505V163.909Z" fill="currentColor"></path>
+              <path d="M29.4224 163.909H21.7802V171.579H29.4224V163.909Z" fill="currentColor"></path>
+              <path d="M40.2852 163.909H32.643V171.579H40.2852V163.909Z" fill="currentColor"></path>
+              <path d="M51.2026 163.909H43.5604V171.579H51.2026V163.909Z" fill="currentColor"></path>
+              <path d="M62.0654 163.909H54.4232V171.579H62.0654V163.909Z" fill="currentColor"></path>
+              <path d="M94.7084 163.909H87.0663V171.579H94.7084V163.909Z" fill="currentColor"></path>
+              <path d="M105.626 163.909H97.9836V171.579H105.626V163.909Z" fill="currentColor"></path>
+              <path d="M116.489 163.909H108.846V171.579H116.489V163.909Z" fill="currentColor"></path>
+              <path d="M127.406 163.909H119.764V171.579H127.406V163.909Z" fill="currentColor"></path>
+              <path d="M138.269 163.909H130.627V171.579H138.269V163.909Z" fill="currentColor"></path>
+              <path d="M149.186 163.909H141.544V171.579H149.186V163.909Z" fill="currentColor"></path>
+              <path d="M160.049 163.909H152.407V171.579H160.049V163.909Z" fill="currentColor"></path>
+              <path d="M170.966 163.909H163.324V171.579H170.966V163.909Z" fill="currentColor"></path>
+              <path d="M181.829 163.909H174.187V171.579H181.829V163.909Z" fill="currentColor"></path>
+              <path d="M192.692 163.909H185.05V171.579H192.692V163.909Z" fill="currentColor"></path>
+              <path d="M203.609 163.909H195.967V171.579H203.609V163.909Z" fill="currentColor"></path>
+              <path d="M214.472 163.909H206.83V171.579H214.472V163.909Z" fill="currentColor"></path>
+              <path d="M225.39 163.909H217.748V171.579H225.39V163.909Z" fill="currentColor"></path>
+              <path d="M236.253 163.909H228.61V171.579H236.253V163.909Z" fill="currentColor"></path>
+              <path d="M247.17 163.909H239.528V171.579H247.17V163.909Z" fill="currentColor"></path>
+              <path d="M258.033 163.909H250.391V171.579H258.033V163.909Z" fill="currentColor"></path>
+              <path d="M268.95 163.909H261.308V171.579H268.95V163.909Z" fill="currentColor"></path>
+              <path d="M279.813 163.909H272.171V171.579H279.813V163.909Z" fill="currentColor"></path>
+              <path d="M290.676 163.909H283.034V171.579H290.676V163.909Z" fill="currentColor"></path>
+              <path d="M301.593 163.909H293.951V171.579H301.593V163.909Z" fill="currentColor"></path>
+              <path d="M312.456 163.909H304.814V171.579H312.456V163.909Z" fill="currentColor"></path>
+              <path d="M323.373 163.909H315.731V171.579H323.373V163.909Z" fill="currentColor"></path>
+              <path d="M334.236 163.909H326.594V171.579H334.236V163.909Z" fill="currentColor"></path>
+              <path d="M345.154 163.909H337.511V171.579H345.154V163.909Z" fill="currentColor"></path>
+              <path d="M356.016 163.909H348.374V171.579H356.016V163.909Z" fill="currentColor"></path>
+              <path d="M366.879 163.909H359.237V171.579H366.879V163.909Z" fill="currentColor"></path>
+              <path d="M377.797 163.909H370.154V171.579H377.797V163.909Z" fill="currentColor"></path>
+              <path d="M388.659 163.909H381.017V171.579H388.659V163.909Z" fill="currentColor"></path>
+              <path d="M399.577 163.909H391.935V171.579H399.577V163.909Z" fill="currentColor"></path>
+              <path d="M410.44 163.909H402.797V171.579H410.44V163.909Z" fill="currentColor"></path>
+              <path d="M29.4224 174.811H21.7802V182.48H29.4224V174.811Z" fill="currentColor"></path>
+              <path d="M40.2852 174.811H32.643V182.48H40.2852V174.811Z" fill="currentColor"></path>
+              <path d="M51.2026 174.811H43.5604V182.48H51.2026V174.811Z" fill="currentColor"></path>
+              <path d="M62.0654 174.811H54.4232V182.48H62.0654V174.811Z" fill="currentColor"></path>
+              <path d="M105.626 174.811H97.9836V182.48H105.626V174.811Z" fill="currentColor"></path>
+              <path d="M116.489 174.811H108.846V182.48H116.489V174.811Z" fill="currentColor"></path>
+              <path d="M149.186 174.811H141.544V182.48H149.186V174.811Z" fill="currentColor"></path>
+              <path d="M160.049 174.811H152.407V182.48H160.049V174.811Z" fill="currentColor"></path>
+              <path d="M170.966 174.811H163.324V182.48H170.966V174.811Z" fill="currentColor"></path>
+              <path d="M181.829 174.811H174.187V182.48H181.829V174.811Z" fill="currentColor"></path>
+              <path d="M192.692 174.811H185.05V182.48H192.692V174.811Z" fill="currentColor"></path>
+              <path d="M203.609 174.811H195.967V182.48H203.609V174.811Z" fill="currentColor"></path>
+              <path d="M214.472 174.811H206.83V182.48H214.472V174.811Z" fill="currentColor"></path>
+              <path d="M225.39 174.811H217.748V182.48H225.39V174.811Z" fill="currentColor"></path>
+              <path d="M236.253 174.811H228.61V182.48H236.253V174.811Z" fill="currentColor"></path>
+              <path d="M247.17 174.811H239.528V182.48H247.17V174.811Z" fill="currentColor"></path>
+              <path d="M258.033 174.811H250.391V182.48H258.033V174.811Z" fill="currentColor"></path>
+              <path d="M268.95 174.811H261.308V182.48H268.95V174.811Z" fill="currentColor"></path>
+              <path d="M279.813 174.811H272.171V182.48H279.813V174.811Z" fill="currentColor"></path>
+              <path d="M290.676 174.811H283.034V182.48H290.676V174.811Z" fill="currentColor"></path>
+              <path d="M301.593 174.811H293.951V182.48H301.593V174.811Z" fill="currentColor"></path>
+              <path d="M312.456 174.811H304.814V182.48H312.456V174.811Z" fill="currentColor"></path>
+              <path d="M323.373 174.811H315.731V182.48H323.373V174.811Z" fill="currentColor"></path>
+              <path d="M334.236 174.811H326.594V182.48H334.236V174.811Z" fill="currentColor"></path>
+              <path d="M345.154 174.811H337.511V182.48H345.154V174.811Z" fill="currentColor"></path>
+              <path d="M356.016 174.811H348.374V182.48H356.016V174.811Z" fill="currentColor"></path>
+              <path d="M366.879 174.811H359.237V182.48H366.879V174.811Z" fill="currentColor"></path>
+              <path d="M377.797 174.811H370.154V182.48H377.797V174.811Z" fill="currentColor"></path>
+              <path d="M388.659 174.811H381.017V182.48H388.659V174.811Z" fill="currentColor"></path>
+              <path d="M399.577 174.811H391.935V182.48H399.577V174.811Z" fill="currentColor"></path>
+              <path d="M410.44 174.811H402.797V182.48H410.44V174.811Z" fill="currentColor"></path>
+              <path d="M421.357 174.811H413.715V182.48H421.357V174.811Z" fill="currentColor"></path>
+              <path d="M29.4224 185.712H21.7802V193.382H29.4224V185.712Z" fill="currentColor"></path>
+              <path d="M40.2852 185.712H32.643V193.382H40.2852V185.712Z" fill="currentColor"></path>
+              <path d="M116.489 185.712H108.846V193.382H116.489V185.712Z" fill="currentColor"></path>
+              <path d="M160.049 185.712H152.407V193.382H160.049V185.712Z" fill="currentColor"></path>
+              <path d="M170.966 185.712H163.324V193.382H170.966V185.712Z" fill="currentColor"></path>
+              <path d="M181.829 185.712H174.187V193.382H181.829V185.712Z" fill="currentColor"></path>
+              <path d="M192.692 185.712H185.05V193.382H192.692V185.712Z" fill="currentColor"></path>
+              <path d="M203.609 185.712H195.967V193.382H203.609V185.712Z" fill="currentColor"></path>
+              <path d="M214.472 185.712H206.83V193.382H214.472V185.712Z" fill="currentColor"></path>
+              <path d="M225.39 185.712H217.748V193.382H225.39V185.712Z" fill="currentColor"></path>
+              <path d="M236.253 185.712H228.61V193.382H236.253V185.712Z" fill="currentColor"></path>
+              <path d="M247.17 185.712H239.528V193.382H247.17V185.712Z" fill="currentColor"></path>
+              <path d="M258.033 185.712H250.391V193.382H258.033V185.712Z" fill="currentColor"></path>
+              <path d="M268.95 185.712H261.308V193.382H268.95V185.712Z" fill="currentColor"></path>
+              <path d="M279.813 185.712H272.171V193.382H279.813V185.712Z" fill="currentColor"></path>
+              <path d="M290.676 185.712H283.034V193.382H290.676V185.712Z" fill="currentColor"></path>
+              <path d="M301.593 185.712H293.951V193.382H301.593V185.712Z" fill="currentColor"></path>
+              <path d="M312.456 185.712H304.814V193.382H312.456V185.712Z" fill="currentColor"></path>
+              <path d="M323.373 185.712H315.731V193.382H323.373V185.712Z" fill="currentColor"></path>
+              <path d="M334.236 185.712H326.594V193.382H334.236V185.712Z" fill="currentColor"></path>
+              <path d="M345.154 185.712H337.511V193.382H345.154V185.712Z" fill="currentColor"></path>
+              <path d="M356.016 185.712H348.374V193.382H356.016V185.712Z" fill="currentColor"></path>
+              <path d="M366.879 185.712H359.237V193.382H366.879V185.712Z" fill="currentColor"></path>
+              <path d="M377.797 185.712H370.154V193.382H377.797V185.712Z" fill="currentColor"></path>
+              <path d="M388.659 185.712H381.017V193.382H388.659V185.712Z" fill="currentColor"></path>
+              <path d="M399.577 185.712H391.935V193.382H399.577V185.712Z" fill="currentColor"></path>
+              <path d="M410.44 185.712H402.797V193.382H410.44V185.712Z" fill="currentColor"></path>
+              <path d="M421.357 185.712H413.715V193.382H421.357V185.712Z" fill="currentColor"></path>
+              <path d="M181.829 196.669H174.187V204.338H181.829V196.669Z" fill="currentColor"></path>
+              <path d="M192.692 196.669H185.05V204.338H192.692V196.669Z" fill="currentColor"></path>
+              <path d="M203.609 196.669H195.967V204.338H203.609V196.669Z" fill="currentColor"></path>
+              <path d="M214.472 196.669H206.83V204.338H214.472V196.669Z" fill="currentColor"></path>
+              <path d="M225.39 196.669H217.748V204.338H225.39V196.669Z" fill="currentColor"></path>
+              <path d="M236.253 196.669H228.61V204.338H236.253V196.669Z" fill="currentColor"></path>
+              <path d="M247.17 196.669H239.528V204.338H247.17V196.669Z" fill="currentColor"></path>
+              <path d="M258.033 196.669H250.391V204.338H258.033V196.669Z" fill="currentColor"></path>
+              <path d="M268.95 196.669H261.308V204.338H268.95V196.669Z" fill="currentColor"></path>
+              <path d="M279.813 196.669H272.171V204.338H279.813V196.669Z" fill="currentColor"></path>
+              <path d="M290.676 196.669H283.034V204.338H290.676V196.669Z" fill="currentColor"></path>
+              <path d="M301.593 196.669H293.951V204.338H301.593V196.669Z" fill="currentColor"></path>
+              <path d="M312.456 196.669H304.814V204.338H312.456V196.669Z" fill="currentColor"></path>
+              <path d="M323.373 196.669H315.731V204.338H323.373V196.669Z" fill="currentColor"></path>
+              <path d="M334.236 196.669H326.594V204.338H334.236V196.669Z" fill="currentColor"></path>
+              <path d="M345.154 196.669H337.511V204.338H345.154V196.669Z" fill="currentColor"></path>
+              <path d="M356.016 196.669H348.374V204.338H356.016V196.669Z" fill="currentColor"></path>
+              <path d="M366.879 196.669H359.237V204.338H366.879V196.669Z" fill="currentColor"></path>
+              <path d="M377.797 196.669H370.154V204.338H377.797V196.669Z" fill="currentColor"></path>
+              <path d="M388.659 196.669H381.017V204.338H388.659V196.669Z" fill="currentColor"></path>
+              <path d="M399.577 196.669H391.935V204.338H399.577V196.669Z" fill="currentColor"></path>
+              <path d="M410.44 196.669H402.797V204.338H410.44V196.669Z" fill="currentColor"></path>
+              <path d="M432.22 196.669H424.578V204.338H432.22V196.669Z" fill="currentColor"></path>
+              <path d="M181.829 207.571H174.187V215.24H181.829V207.571Z" fill="currentColor"></path>
+              <path d="M192.692 207.571H185.05V215.24H192.692V207.571Z" fill="currentColor"></path>
+              <path d="M203.609 207.571H195.967V215.24H203.609V207.571Z" fill="currentColor"></path>
+              <path d="M214.472 207.571H206.83V215.24H214.472V207.571Z" fill="currentColor"></path>
+              <path d="M225.39 207.571H217.748V215.24H225.39V207.571Z" fill="currentColor"></path>
+              <path d="M236.253 207.571H228.61V215.24H236.253V207.571Z" fill="currentColor"></path>
+              <path d="M247.17 207.571H239.528V215.24H247.17V207.571Z" fill="currentColor"></path>
+              <path d="M258.033 207.571H250.391V215.24H258.033V207.571Z" fill="currentColor"></path>
+              <path d="M268.95 207.571H261.308V215.24H268.95V207.571Z" fill="currentColor"></path>
+              <path d="M279.813 207.571H272.171V215.24H279.813V207.571Z" fill="currentColor"></path>
+              <path d="M290.676 207.571H283.034V215.24H290.676V207.571Z" fill="currentColor"></path>
+              <path d="M301.593 207.571H293.951V215.24H301.593V207.571Z" fill="currentColor"></path>
+              <path d="M312.456 207.571H304.814V215.24H312.456V207.571Z" fill="currentColor"></path>
+              <path d="M323.373 207.571H315.731V215.24H323.373V207.571Z" fill="currentColor"></path>
+              <path d="M334.236 207.571H326.594V215.24H334.236V207.571Z" fill="currentColor"></path>
+              <path d="M366.879 207.571H359.237V215.24H366.879V207.571Z" fill="currentColor"></path>
+              <path d="M377.797 207.571H370.154V215.24H377.797V207.571Z" fill="currentColor"></path>
+              <path d="M388.659 207.571H381.017V215.24H388.659V207.571Z" fill="currentColor"></path>
+              <path d="M399.577 207.571H391.935V215.24H399.577V207.571Z" fill="currentColor"></path>
+              <path d="M410.44 207.571H402.797V215.24H410.44V207.571Z" fill="currentColor"></path>
+              <path d="M192.692 218.527H185.05V226.197H192.692V218.527Z" fill="currentColor"></path>
+              <path d="M203.609 218.527H195.967V226.197H203.609V218.527Z" fill="currentColor"></path>
+              <path d="M214.472 218.527H206.83V226.197H214.472V218.527Z" fill="currentColor"></path>
+              <path d="M225.39 218.527H217.748V226.197H225.39V218.527Z" fill="currentColor"></path>
+              <path d="M236.253 218.527H228.61V226.197H236.253V218.527Z" fill="currentColor"></path>
+              <path d="M247.17 218.527H239.528V226.197H247.17V218.527Z" fill="currentColor"></path>
+              <path d="M258.033 218.527H250.391V226.197H258.033V218.527Z" fill="currentColor"></path>
+              <path d="M268.95 218.527H261.308V226.197H268.95V218.527Z" fill="currentColor"></path>
+              <path d="M279.813 218.527H272.171V226.197H279.813V218.527Z" fill="currentColor"></path>
+              <path d="M290.676 218.527H283.034V226.197H290.676V218.527Z" fill="currentColor"></path>
+              <path d="M301.593 218.527H293.951V226.197H301.593V218.527Z" fill="currentColor"></path>
+              <path d="M312.456 218.527H304.814V226.197H312.456V218.527Z" fill="currentColor"></path>
+              <path d="M323.373 218.527H315.731V226.197H323.373V218.527Z" fill="currentColor"></path>
+              <path d="M334.236 218.527H326.594V226.197H334.236V218.527Z" fill="currentColor"></path>
+              <path d="M410.44 218.527H402.797V226.197H410.44V218.527Z" fill="currentColor"></path>
+              <path d="M203.609 229.429H195.967V237.098H203.609V229.429Z" fill="currentColor"></path>
+              <path d="M214.472 229.429H206.83V237.098H214.472V229.429Z" fill="currentColor"></path>
+              <path d="M247.17 229.429H239.528V237.098H247.17V229.429Z" fill="currentColor"></path>
+              <path d="M279.813 229.429H272.171V237.098H279.813V229.429Z" fill="currentColor"></path>
+              <path d="M290.676 229.429H283.034V237.098H290.676V229.429Z" fill="currentColor"></path>
+              <path d="M301.593 229.429H293.951V237.098H301.593V229.429Z" fill="currentColor"></path>
+              <path d="M312.456 229.429H304.814V237.098H312.456V229.429Z" fill="currentColor"></path>
+              <path d="M399.577 229.429H391.935V237.098H399.577V229.429Z" fill="currentColor"></path>
+              <path d="M410.44 229.429H402.797V237.098H410.44V229.429Z" fill="currentColor"></path>
+              <path d="M399.577 240.385H391.935V248.055H399.577V240.385Z" fill="currentColor"></path>
+              <path d="M410.44 240.385H402.797V248.055H410.44V240.385Z" fill="currentColor"></path>
+            </svg>
+          </div>
+          <div class="advantages__row">
+                  <div class="advantages__block" data-advantages="1"><strong data-value="600">0</strong><span>Грузовых машин</span></div>
+                  <div class="advantages__block" data-advantages="2"><strong data-value="494">0</strong><span>Терминалов «ТБ Логистик» по городам</span></div>
+                  <div class="advantages__block" data-advantages="3"><strong data-value="4500">0</strong><span>Сотрудников в организации</span></div>
+                  <div class="advantages__block" data-advantages="4"><strong data-value="35000">0</strong><span>Населенных пунктов в логистической сети</span></div>
+          </div>
+        </div>
+      </div>
+      <section class="popular">
+        <div class="container">
+          <h2 class="title-h2">Популярные направления доставки сборных грузов и стоимость</h2>
+          <div class="table">
+            <ul class="table-row table-head">
+              <li>Перевозки по регионам РФ</li>
+              <li>Минимальная цена (в рублях)</li>
+              <li>Весовая категория груза до 250кг</li>
+              <li>Весовая категория груза до 750кг</li>
+              <li>Весовая категория груза до 1250 кг</li>
+            </ul>
+                  <ul class="table-row">
+                    <li>Санкт-Петербург-Москва</li>
+                    <li>От 200</li>
+                    <li>6,3 руб/кг</li>
+                    <li>6,2 руб/кг</li>
+                    <li>6,1 руб/кг</li>
+                  </ul>
+                  <ul class="table-row">
+                    <li>Ростов-на-Дону-Москва</li>
+                    <li>От 150</li>
+                    <li>7,9 руб/кг</li>
+                    <li>7,8 руб/кг</li>
+                    <li>7,6 руб/кг</li>
+                  </ul>
+                  <ul class="table-row">
+                    <li>Москва-Казань</li>
+                    <li>От 150</li>
+                    <li>8,1 руб/кг</li>
+                    <li>8,0 руб/кг</li>
+                    <li>7,9 руб/кг</li>
+                  </ul>
+                  <ul class="table-row">
+                    <li>Волгоград-Самара</li>
+                    <li>От 250</li>
+                    <li>6,6 руб/кг</li>
+                    <li>6,4 руб/кг</li>
+                    <li>6,2 руб/кг</li>
+                  </ul>
+                  <ul class="table-row">
+                    <li>Самара-Краснодар</li>
+                    <li>От 250</li>
+                    <li>6,6 руб/кг</li>
+                    <li>6,4 руб/кг</li>
+                    <li>6,2 руб/кг</li>
+                  </ul>
+          </div>
+          <button class="btn">Все тарифы</button>
+        </div>
+      </section>
+      <!--Доверие-->
+      <section class="trust">
+        <div class="container">
+          <h2 class="title-h2">Почему грузовые перевозки стоит доверить компании «ТБ Логистик»</h2>
+          <div class="trust__row">
+            <div class="trust__left">
+              <ul>
+                <li>Оформляем закрывающие документы в течение 3 рабочих дней с момента разгрузки</li>
+                <li>Застрахованы абсолютно все грузы клиентов</li>
+                <li>Предоставляем персонального менеджера, который будет на связи 24 часа/7 дней</li>
+                <li>Решаем транспортные задачи любой сложности и масштаба</li>
+              </ul>
+            </div>
+            <div class="trust__right">
+              <div class="trust__block trust__quality">
+                <div class="img"><img src="./img/icons/arrow-up.svg" alt="" aria-hidden="true"></div><b class="title-h2">Высокое качество услуг</b>
+                <p>Более 20 успешных лет в сфере грузовых перевозок, лидирующее положение на рынке.</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Под высоким качеством услуг мы понимаем:</b>
+                  <ul>
+                    <li>100% гарантию сохранности груза</li>
+                    <li>стабильные сроки выхода транспорта</li>
+                    <li>лучший сервис в отрасли</li>
+                    <li>профессиональную команду</li>
+                    <li>внимание к каждому клиенту</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="trust__block trust__sell">
+                <div class="img"><img src="./img/icons/purse.svg" alt="" aria-hidden="true"></div><b class="title-h2">Низкие цены</b>
+                <p>Индивидуальные тарифные планы для постоянных клиентов</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Низкие цены на перевозку грузов по России - это:</b>
+                  <ul>
+                    <li>индивидуальные тарифные планы</li>
+                    <li>низкие тарифы на грузовые перевозки</li>
+                    <li>скидка 10% за онлайн-заказ</li>
+                    <li>бесплатное ответственное хранение</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="container row">
+          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:88000000000" title="Позвонить на номер 8 800 000-00-00">8 800 000-00-00</a></div>
+                <div class="form cta__form">
+                  <div class="form__inputs">
+                    <label class="input">
+                      <input data-name type="text" required><span>ФИО</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="text" required><span>Телефон</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="mail" required><span>Email</span>
+                    </label><small>Я согласен(согласна) на обработку 
+                      <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+                    <button class="btn">Оставить заявку</button>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+              <div class="navbar footer__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                      <svg>
+                        <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
+                        <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
+                        <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                      </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+                <nav class="navbar__nav">
+                  <ul>
+                    <li><a href="#about">О компании</a></li>
+                    <li><a href="#service">Услуги</a></li>
+                    <li><a href="#tariffs">Тарифы</a></li>
+                    <li><a href="#info">Информация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="contacts-block footer__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#envelope"></use>
+                  </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#phone"></use>
+                  </svg><span>8 800-125-00-00</span></a>
+              </div>
+          <div class="footer__buttons">
+            <button class="btn" data-modal="form">Онлайн заявка</button>
+            <button class="btn">Калькулятор</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container"><small>© 2020 ТБ Логистик. Все права защищены</small><a class="footer__bottom-web2" href="https://web2.ru" target="_blank" title="Переход на сайт web2.ru"> <span>Разработка сайта web2.ru</span></a></div>
+      </div>
+      <button class="scroll-up">
+        <svg width="12" height="8">
+          <use class="scroll-up__arrow" href="./img/sprites/sprite.svg#angle"></use>
+        </svg>
+      </button>
+    </footer>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
