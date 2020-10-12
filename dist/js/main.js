@@ -253,6 +253,29 @@ const liveMap = () => {
 
 /***/ }),
 
+/***/ "../views/blocks/trust/trust.js":
+/*!**************************************!*\
+  !*** ../views/blocks/trust/trust.js ***!
+  \**************************************/
+/*! exports provided: trust */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trust", function() { return trust; });
+
+const trust = () => {
+  $(window).on('resize load', function () {
+    let qualityHeight = $('.trust__quality .trust__hover-block').outerHeight();
+    let sellHeight = $('.trust__sell .trust__hover-block').outerHeight();
+    $('.trust__quality').css('min-height', qualityHeight);
+    $('.trust__sell').css('min-height', sellHeight);
+  });
+};
+
+
+/***/ }),
+
 /***/ "../views/components/scroll-up/scroll-up.js":
 /*!**************************************************!*\
   !*** ../views/components/scroll-up/scroll-up.js ***!
@@ -326,19 +349,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "header", function() { return header; });
 
 const header = () => {
+  let windowWidth = window.innerWidth;
   /*! Затенение фона*/
   $(window).on('scroll resize load', function () {
     let scroll = $(window).scrollTop();
-    let windowWidth = window.innerWidth;
     let headHeight = $('.header__head').outerHeight() + 1;
 
     /*! появление фона при скролле хотя бы на чуть-чуть */
-    if (scroll <= headHeight * 3 && windowWidth >= 768) {
+    if (scroll <= headHeight * 3) {
       $('.header__head').css('margin-top', -scroll / 3);
+      $('.header__head').css('visibilty', 'visible');
       $('.header').removeClass('fixed');
       $('.header__navbar .logo').addClass('logo-hover');
     } else {
       $('.header__head').css('margin-top', -headHeight);
+      $('.header__head').css('visibilty', 'hidden');
       $('.header').addClass('fixed');
       $('.header__navbar .logo').removeClass('logo-hover');
     }
@@ -363,24 +388,36 @@ const header = () => {
 
   /*!***** Мобилка ******/
 
-  /*! Блок с контактами */
-  $('.header').on('click', '.header__contacts-block-btn-burger', function () {
+  /*! Бургер-меню подстройка высоты*/
+  const burgerMenu = () => {
+    let headerHeight = $('.header').outerHeight();
+    let conctactsHeight = $('.header__contacts-block').outerHeight();
+    let buttonsHeight = $('.header__buttons').outerHeight();
+    let leftHeight = conctactsHeight + buttonsHeight;
+    $('.header__buttons').css('top', headerHeight + conctactsHeight);
+    $('.header__navbar ul').css('bottom', -leftHeight);
+    $('.header.open').find('.header__shadow').css('bottom', -leftHeight);
+  };
+
+  /*! Бургер-меню */
+  $('.header').on('click', '.btn-burger', function () {
     let expanded = $(this).attr('aria-expanded') === 'true';
     $(this).attr('aria-expanded', !expanded);
     $(this).toggleClass('open');
-    $('.header__contacts-block').toggleClass('show');
+    $('.header').toggleClass('open');
+    if ($(this).hasClass('open')) {
+      burgerMenu();
+    } else {
+      $('.header__shadow').css('bottom', 0);
+    }
   });
-
-  /*! Блок с navbar */
-  $('.header').on('click', '.header__navbar-btn-burger', function () {
-    let expanded = $(this).attr('aria-expanded') === 'true';
-    $(this).attr('aria-expanded', !expanded);
-    $(this).toggleClass('open');
-    $('.header__navbar').toggleClass('show');
+  $(window).on('resize scroll', function () {
+    burgerMenu();
   });
-
   /*! Классы для стоп-анимации */
-  let stopClasses = $('.header__contacts-block, .header__navbar');
+  let stopClasses = $(
+    '.header__contacts-block, .header__navbar, .header__buttons button, .header__navbar ul a, .header__contacts-block a, .calculate__form >*, .header__shadow'
+  );
 
   /*! Отмена анимации при ресайзе */
   $(window).on('resize', function () {
@@ -542,6 +579,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
 /* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
 /* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
+/* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -562,6 +600,7 @@ jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
   Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__["advantages"])();
   Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["calculate"])();
   Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["liveMap"])();
+  Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_7__["trust"])();
   Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
 });
 /* 

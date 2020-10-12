@@ -20,9 +20,8 @@
                     </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
                     <svg>
                       <use href="./img/sprites/sprite.svg#phone"></use>
-                    </svg><span>8 800-125-00-00</span></a>
-                  <select name="Москва"></select>
-                </div>
+                    </svg><span>8 800-125-00-00</span></a></div>
+            <select name="Москва"></select>
             <div class="header__right">
               <div class="header__login">
                 <svg>
@@ -49,9 +48,11 @@
                     <li><a href="#info">Информация</a></li>
                     <li><a href="#contacts">Контакты</a></li>
                   </ul>
+                      <button class="btn-burger" aria-expanded="false"><span class="top"></span><span class="mid"></span><span class="bot"></span></button>
                 </nav>
               </div>
         </div>
+        <div class="header__shadow"></div>
       </header>
       <!--Banner-->
       <div class="heading">
@@ -69,6 +70,8 @@
                 <div class="relative">
                   <input type="text" required><span class="placeholder">Откуда</span>
                 </div>
+              </label>
+              <div class="calculate__swap">
                 <button class="button-swap">
                   <svg transform="rotate(180)">
                     <use href="./img/sprites/sprite.svg#arrow"></use>
@@ -77,7 +80,7 @@
                     <use href="./img/sprites/sprite.svg#arrow"></use>
                   </svg>
                 </button>
-              </label>
+              </div>
               <label class="calculate__input calculate__to">
                 <svg>
                   <use href="./img/sprites/sprite.svg#marker"></use>
@@ -100,13 +103,14 @@
                 </svg>
                 <div class="relative">
                   <input type="text" required><span class="placeholder">Обьем</span>
-                </div><span class="units">М&nbsp;<sup>3</sup></span>
+                </div><span class="units">М<sup>3</sup></span>
               </label>
               <button class="calculate__submit"><span>Рассчитать</span>
                 <svg>
                   <use href="./img/sprites/sprite.svg#arrow"></use>
                 </svg>
               </button>
+              <div class="input-empty"></div>
             </div>
           </div>
         </div>
@@ -690,11 +694,11 @@
           <h2 class="title-h2">Популярные направления доставки сборных грузов и стоимость</h2>
           <div class="table">
             <ul class="table-row table-head">
-              <li>Перевозки по регионам РФ</li>
-              <li>Минимальная цена (в рублях)</li>
-              <li>Весовая категория груза до 250кг</li>
-              <li>Весовая категория груза до 750кг</li>
-              <li>Весовая категория груза до 1250 кг</li>
+              <li><span>Перевозки по регионам РФ</span></li>
+              <li><span>Минимальная цена (в рублях)</span></li>
+              <li><span>Весовая категория груза до 250кг</span></li>
+              <li><span>Весовая категория груза до 750кг</span></li>
+              <li><span>Весовая категория груза до 1250 кг</span></li>
             </ul>
                   <ul class="table-row">
                     <li>Санкт-Петербург-Москва</li>
@@ -831,8 +835,7 @@
                   </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
                   <svg>
                     <use href="./img/sprites/sprite.svg#phone"></use>
-                  </svg><span>8 800-125-00-00</span></a>
-              </div>
+                  </svg><span>8 800-125-00-00</span></a></div>
           <div class="footer__buttons">
             <button class="btn" data-modal="form">Онлайн заявка</button>
             <button class="btn">Калькулятор</button>
