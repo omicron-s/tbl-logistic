@@ -253,6 +253,66 @@ const liveMap = () => {
 
 /***/ }),
 
+/***/ "../views/blocks/clients/clients.js":
+/*!******************************************!*\
+  !*** ../views/blocks/clients/clients.js ***!
+  \******************************************/
+/*! exports provided: clients */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clients", function() { return clients; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../../node_modules/swiper/swiper.esm.js");
+
+
+const clients = () => {
+  swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Keyboard"]]);
+
+  var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+    slidesPerView: 1,
+    keyboard: true,
+    speed: 400,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoHeight: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+      // when window width is >= 540px
+      540: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 4,
+        centeredSlides: false,
+      },
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 5,
+        centeredSlides: false,
+      },
+    },
+  });
+};
+
+
+/***/ }),
+
 /***/ "../views/blocks/trust/trust.js":
 /*!**************************************!*\
   !*** ../views/blocks/trust/trust.js ***!
@@ -312,7 +372,7 @@ const scrollUp = () => {
     } else {
       // фиксация если скролл дошел до footer для маленьких экранов, высота кнопки + отступ кнопки и оступ от высоты   footer
       if (
-        scroll - 75 > footerOffset &&
+        scroll - 35 > footerOffset &&
         $(window).scrollTop() > window.innerHeight
       ) {
         btn.addClass('absolute');
@@ -524,7 +584,15 @@ const modal = () => {
     $('.modal[data-modal="' + modalName + '"]')
       .addClass('show')
       .css('top', headerTop);
-
+    if (modalName == 'zoom') {
+      let altImg = $(this).find('img').attr('alt');
+      let srcImg = $(this).find('img').attr('src');
+      console.log(altImg, srcImg);
+      $('.modal[data-modal="zoom"]').find('img')
+        .attr('alt', altImg)
+        .attr('src', srcImg);
+        $('.modal[data-modal="zoom"]').find('.modal__title').text(altImg);
+    }
     //При смене ширины окна, она будет под header
     $(window).on('resize', function () {
       headerTop = $('.header').outerHeight();
@@ -576,10 +644,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/scroll-up/scroll-up */ "../views/components/scroll-up/scroll-up.js");
 /* harmony import */ var _layouts_header_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @layouts/header/header */ "../views/layouts/header/header.js");
-/* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
-/* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
-/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
-/* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
+/* harmony import */ var _blocks_clients_clients__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/clients/clients */ "../views/blocks/clients/clients.js");
+/* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
+/* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
+/* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -596,11 +665,12 @@ global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
   Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_3__["header"])();
-  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_6__["modal"])();
-  Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_4__["advantages"])();
-  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["calculate"])();
-  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_5__["liveMap"])();
-  Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_7__["trust"])();
+  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_7__["modal"])();
+  Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_5__["advantages"])();
+  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_6__["calculate"])();
+  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_6__["liveMap"])();
+  Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_4__["clients"])();
+  Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_8__["trust"])();
   Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
 });
 /* 
