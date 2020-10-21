@@ -2316,6 +2316,10 @@ h2 {
   margin: 0 0 -1px 15px;
 }
 
+.footer__bottom-web2:hover {
+  color: #2784e5;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -2392,6 +2396,10 @@ h2 {
 
 .header__buttons [data-modal="form"] {
   margin-right: 25px;
+}
+
+.header.fixed {
+  background-color: #fff;
 }
 
 .header.fixed .container {
