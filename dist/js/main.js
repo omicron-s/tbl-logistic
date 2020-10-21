@@ -420,22 +420,20 @@ const header = () => {
       $('.header__head').css('margin-top', -scroll / 3);
       $('.header__head').css('visibilty', 'visible');
       $('.header').removeClass('fixed');
-      $('.header__navbar .logo').addClass('logo-hover');
     } else {
       $('.header__head').css('margin-top', -headHeight);
       $('.header__head').css('visibilty', 'hidden');
       $('.header').addClass('fixed');
-      $('.header__navbar .logo').removeClass('logo-hover');
     }
   });
 
-  /*! Плавный переход */
+/*   // Плавный переход
   $('.navbar').on('click', 'a', function (e) {
     e.preventDefault();
     let headerTop = $('.header').outerHeight();
     let sc = $(this).attr('href');
 
-    /*! Минус высота fixed - header */
+    // Минус высота fixed - header
     let dn = $(sc).offset().top - headerTop;
     $('html, body').animate(
       { scrollTop: dn },
@@ -445,7 +443,7 @@ const header = () => {
       }
     );
   });
-
+ */
   /*!***** Мобилка ******/
 
   /*! Бургер-меню подстройка высоты*/
