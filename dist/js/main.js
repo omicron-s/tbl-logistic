@@ -325,10 +325,23 @@ __webpack_require__.r(__webpack_exports__);
 
 const trust = () => {
   $(window).on('resize load', function () {
-    let qualityHeight = $('.trust__quality .trust__hover-block').outerHeight();
-    let sellHeight = $('.trust__sell .trust__hover-block').outerHeight();
-    $('.trust__quality').css('min-height', qualityHeight);
-    $('.trust__sell').css('min-height', sellHeight);
+    $(
+      '.trust__quality, .trust__quality .trust__hover-block, .trust__sell, .trust__sell .trust__hover-block'
+    ).removeAttr('style');
+    let qH = $('.trust__quality').outerHeight();
+    let qHH = $('.trust__quality .trust__hover-block').outerHeight();
+    let sH = $('.trust__sell').outerHeight();
+    let sHH = $('.trust__sell .trust__hover-block').outerHeight();
+    if (qH <= qHH) {
+      $('.trust__quality').css('min-height', qHH);
+    } else {
+      $('.trust__quality .trust__hover-block').css('min-height', qH);
+    }
+    if (sH <= sHH) {
+      $('.trust__sell').css('min-height', sHH);
+    } else {
+      $('.trust__sell .trust__hover-block').css('min-height', sH);
+    }
   });
 };
 

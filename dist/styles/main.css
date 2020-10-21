@@ -1289,6 +1289,7 @@ h2 {
   width: 220px;
   height: 105px;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .clients__brand img {
@@ -1790,9 +1791,7 @@ h2 {
 
 .trust__block:hover .trust__hover-block {
   z-index: 1;
-  bottom: 0;
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  opacity: 1;
 }
 
 .trust__block .title-h2 {
@@ -1832,12 +1831,9 @@ h2 {
   left: 0;
   width: 100%;
   padding: 15px 40px;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition: z-index 0.5s, -webkit-transform 0.5s;
-  transition: z-index 0.5s, -webkit-transform 0.5s;
-  transition: transform 0.5s, z-index 0.5s;
-  transition: transform 0.5s, z-index 0.5s, -webkit-transform 0.5s;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, z-index 0.5s;
+  transition: opacity 0.5s, z-index 0.5s;
 }
 
 .trust__hover-block b {
@@ -2296,13 +2292,26 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .footer__bottom-web2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   text-decoration: underline;
+}
+
+.footer__bottom-web2 span {
+  margin: 0 0 -1px 15px;
 }
 
 .header {
