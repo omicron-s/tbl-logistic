@@ -324,7 +324,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "trust", function() { return trust; });
 
 const trust = () => {
-  $(window).on('resize load', function () {
+  $(window).on('resize load mouseenter', function () {
     $(
       '.trust__quality, .trust__quality .trust__hover-block, .trust__sell, .trust__sell .trust__hover-block'
     ).removeAttr('style');
