@@ -1316,10 +1316,10 @@ h2 {
   padding: 20px 15px;
   -webkit-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: -webkit-transform 0.1s;
-  transition: -webkit-transform 0.1s;
-  transition: transform 0.1s;
-  transition: transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   background-color: #fff;
   -webkit-box-shadow: 0 0 30px #e3eaee;
   box-shadow: 0 0 30px #e3eaee;
@@ -1834,12 +1834,10 @@ h2 {
   padding: 15px 40px;
   -webkit-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: -webkit-transform 0.1s;
-  transition: -webkit-transform 0.1s;
-  transition: transform 0.1s;
-  transition: transform 0.1s, -webkit-transform 0.1s;
-  -webkit-transform-origin: top;
-  transform-origin: top;
+  -webkit-transition: z-index 0.5s, -webkit-transform 0.5s;
+  transition: z-index 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, z-index 0.5s;
+  transition: transform 0.5s, z-index 0.5s, -webkit-transform 0.5s;
 }
 
 .trust__hover-block b {
