@@ -267,11 +267,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const clients = () => {
-  swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Keyboard"]]);
+  swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
 
   var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
     slidesPerView: 1,
-    keyboard: true,
     speed: 400,
     spaceBetween: 30,
     centeredSlides: true,
