@@ -1792,6 +1792,8 @@ h2 {
 .trust__block:hover .trust__hover-block {
   z-index: 1;
   opacity: 1;
+  -webkit-transition: opacity 0.7s, z-index 0s;
+  transition: opacity 0.7s, z-index 0s;
 }
 
 .trust__block .title-h2 {
@@ -1832,8 +1834,8 @@ h2 {
   width: 100%;
   padding: 15px 40px;
   opacity: 0;
-  -webkit-transition: opacity 0.5s, z-index 0.5s;
-  transition: opacity 0.5s, z-index 0.5s;
+  -webkit-transition: opacity 0.7s, z-index 0s 0.7s;
+  transition: opacity 0.7s, z-index 0s 0.7s;
 }
 
 .trust__hover-block b {
