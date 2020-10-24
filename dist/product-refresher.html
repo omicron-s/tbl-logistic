@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Рефрежераторные перевозоки - Транс Бизнес Логистик</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <div class="container">
+        <div class="header__head">
+              <div class="contacts-block header__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#envelope"></use>
+                  </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#phone"></use>
+                  </svg><span>8 800-125-00-00</span></a></div>
+          <div class="header__right">
+            <div class="header__login">
+              <svg>
+                <use href="./img/sprites/sprite.svg#subtract"></use>
+              </svg><span>Личный кабинет</span>
+            </div>
+            <div class="header__buttons">
+              <button class="btn" data-modal="form">Онлайн заявка</button>
+              <button class="btn">Калькулятор</button>
+            </div>
+          </div>
+        </div>
+            <div class="navbar header__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                    <svg>
+                      <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
+                      <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
+                      <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                    </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+              <nav class="navbar__nav">
+                <ul>
+                  <li><a href="autopark.html">О компании</a></li>
+                  <li><a href="#service">Услуги</a></li>
+                  <li><a href="#tariffs">Тарифы</a></li>
+                  <li><a href="#info">Информация</a></li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                    <button class="btn-burger" aria-expanded="false"><span class="top"></span><span class="mid"></span><span class="bot"></span></button>
+              </nav>
+            </div>
+      </div>
+      <div class="header__shadow"></div>
+    </header>
+    <!--Модалки-->
+    <div class="modal-overlay"></div>
+    <div class="modal modal-personal" data-modal="personal" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Политика конфиденциальности</b>
+        <p>Предоставляя свои персональные данные <b>Пользователь</b> даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+        <ul>
+          <li>Осуществление клиентской поддержки</li>
+          <li>Получения <b>Пользователем</b> информации о маркетинговых событиях</li>
+          <li>Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.</li>
+        </ul>
+        <p>Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность <b>Пользователя/Покупателя</b> такая как:</p>
+        <ul>
+          <li>Фамилия, Имя, Отчество</li>
+          <li>Дата рождения</li>
+          <li>Контактный телефон</li>
+          <li>Адрес электронной почты</li>
+          <li>Почтовый адрес</li>
+        </ul>
+        <p>Персональные данные <b>Пользователей</b> хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+        <p>Администрация сайта обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:</p>
+        <ul>
+          <li>По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ.</li>
+          <li>Стратегическим партнерам, которые работают с администрацией сайта для предоставления продуктов и услуг, или тем из них, которые помогают администрацией сайта реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.</li>
+        </ul>
+        <p>Администрация сайта оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.</p>
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-form" data-modal="form" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Заказать звонок</b><span>Отправьте заявку и мы вам перезвоним в течение 10 минут</span>
+        <div class="form">
+          <div class="form__inputs">
+            <label class="input">
+              <input data-name type="text" required><span>Ваше Имя</span>
+            </label>
+            <label class="input">
+              <input data-tel type="text" required><span>Ваш Телефон</span>
+            </label><small>Нажимая на кнопку «Заказать», вы даете согласие на обработку своих 
+              <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+            <button class="btn">Отправить</button>
+          </div>
+        </div>
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-zoom" data-modal="zoom" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Благодарственное</b><img src="img/clients/letter.png" alt="Благодарственное письмо">
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="heading refresher">
+      <div class="container">
+        <div class="broads"><a href="#">Главная</a> / <a href="#">xxxxxxxxxxxxxxxx Перевозки</a></div>
+        <div class="heading__block">
+          <h1 class="title-h1">Рефрижераторные перевозки</h1><span class="subtitle">Температурные перевозки по Москве и&nbsp;России от -25° до +25°</span>
+          <button class="btn-white" data-modal="form">Оставить заявку</button>
+        </div>
+        <ul class="advantages-block">
+          <li>Гарантируем доставку в срок</li>
+          <li>Доставляем от 1 паллеты до&nbsp;20 тонн</li>
+          <li>По фиксированным тарифам</li>
+          <li>С распечаткой температуры</li>
+        </ul>
+      </div>
+    </div>
+    <main>
+      <section class="products-slider">
+        <div class="container">
+          <h2 class="title-h2">Наш автопарк</h2>
+          <div class="swiper-container">
+            <button class="swiper-button-prev">
+              <svg transform="rotate(270)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 1 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 1 тонна" title="Грузовик типа: Тент с г/п 1 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">13.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">2.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">2.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">20000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">86 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 2 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 2 тонна" title="Грузовик типа: Тент с г/п 2 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">23.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">3.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">4.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">50000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">786 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 1 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 1 тонна" title="Грузовик типа: Тент с г/п 1 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">13.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">2.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">2.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">20000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">86 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 2 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 2 тонна" title="Грузовик типа: Тент с г/п 2 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">23.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">3.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">4.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">50000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">786 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 1 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 1 тонна" title="Грузовик типа: Тент с г/п 1 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">13.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">2.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">2.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">20000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">86 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+              <div class="swiper-slide">
+                      <div class="product-card"><b class="product-card__title">Тент с г/п 2 тонна</b>
+                        <div class="product-card__row">
+                          <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 2 тонна" title="Грузовик типа: Тент с г/п 2 тонна"></div>
+                          <div class="product-card__right">
+                            <div class="product-card__stats"><b>Характеристики:</b>
+                              <ul>
+                                <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">23.6 м</span></li>
+                                <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">3.4 м</span></li>
+                                <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">4.6 м</span></li>
+                                <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">50000 кг</span></li>
+                                <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">786 м<sup>3</sup></span></li>
+                              </ul>
+                            </div>
+                            <button class="btn">Заказать</button>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+            <button class="swiper-button-next">
+              <svg transform="rotate(90)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!--Таблица цен и тарифиов-->
+      <section class="product-table">
+        <div class="container">
+          <h2 class="title-h2">Цены на грузоперевозки рефрижераторами от 1,5 до 20 тонн</h2>
+          <div class="buttons">
+            <button class="btn-select" disabled="disabled">по Москве</button>
+            <button class="btn-select">по России</button>
+          </div>
+          <div class="table-wrapper">
+            <ul class="table table-head">
+              <li><span>Тип машин</span></li>
+              <li><span>Тариф «минимальный» 10 км за МКАД бесплатно</span>
+                <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
+              </li>
+              <li><span>Тариф базовый" в пределах МКАД</span>
+                <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
+              </li>
+              <li><span>Цена доп. часа, руб</span></li>
+              <li><span>Пробег за МКАД, <span>руб/км</span></span></li>
+              <li><span>Пропуск, руб</span>
+                <div class="tr-flex flex-33"><span>МКАД</span><span>ТТК</span><span>СК</span></div>
+              </li>
+            </ul>
+            <div class="table-body">
+                    <ul class="table">
+                      <li> <span>Соболь 1 т / 7 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
+                      </li>
+                      <li> <span>550</span></li>
+                      <li> <span>15</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>Портер 1 т / 8 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
+                      </li>
+                      <li> <span>550</span></li>
+                      <li> <span>15</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>Газель 1.5 т / 14 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>4+1</span><span>4500</span></div>
+                      </li>
+                      <li> <span>600</span></li>
+                      <li> <span>16</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1000</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>3 тонник 18 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>2+1</span><span>3800</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>5+1</span><span>4900</span></div>
+                      </li>
+                      <li> <span>600</span></li>
+                      <li> <span>20</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1200</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>5 тонник 35 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>2+1</span><span>4600</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>6+1</span><span>5900</span></div>
+                      </li>
+                      <li> <span>700</span></li>
+                      <li> <span>25</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>700</span><span>1400</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>10 тонник 55 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>7+1</span><span>7900</span></div>
+                      </li>
+                      <li> <span>900</span></li>
+                      <li> <span>30</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>---</span><span>900</span><span>1800</span></div>
+                      </li>
+                    </ul>
+                    <ul class="table">
+                      <li> <span>Фура 20 тн / 92 куб</span></li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
+                      </li>
+                      <li> 
+                        <div class="tr-flex flex-50"><span>7+1</span><span>10900</span></div>
+                      </li>
+                      <li> <span>1000</span></li>
+                      <li> <span>32</span></li>
+                      <li> 
+                        <div class="tr-flex flex-33"><span>1000</span><span>1000</span><span>2000</span></div>
+                      </li>
+                    </ul>
+            </div>
+          </div>
+          <button class="btn">Все тарифы</button>
+        </div>
+      </section>
+      <!--Что мы перевозим-->
+      <section class="product-goods">
+        <div class="container">
+          <h2 class="title-h2">Мы доставляем</h2>
+          <div class="df">
+            <button class="swiper-button-prev">
+              <svg transform="rotate(270)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="goods-card">
+                          <div class="img"><img src="img/goods/food.png" alt="Сочная говядина"></div><b>Доставка продуктов питания</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="goods-card">
+                          <div class="img"><img src="img/goods/med.png" alt="Баночка с таблетками"></div><b>Доставка медикаментов</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="goods-card">
+                          <div class="img"><img src="img/goods/plant.png" alt="Букет цветов"></div><b>Доставка цветов</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="goods-card">
+                          <div class="img"><img src="img/goods/household-chem.png" alt="Моющие средства и губки"></div><b>Доставка бытовой химии</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="goods-card">
+                          <div class="img"><img src="img/goods/food.png" alt="Сочная говядина"></div><b>Доставка продуктов питания</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <button class="swiper-button-next">
+              <svg transform="rotate(90)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--В цену включено-->
+      <section class="includes">
+        <div class="container">
+          <h2 class="title-h2">Что входит в стоимость</h2>
+          <div class="row">
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-zip"></use>
+                    </svg><span>Возврат документов</span>
+                  </div>
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-temp"></use>
+                    </svg><span>Контроль температуры</span>
+                  </div>
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-doc"></use>
+                    </svg><span>Пропуск в центр Москвы</span><small>Бесплатно для портнера</small>
+                  </div>
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-trust"></use>
+                    </svg><span>Страховка</span>
+                  </div>
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-purse"></use>
+                    </svg><span>Платим НДС в белую</span>
+                  </div>
+                  <div class="includes-card">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#inc-check"></use>
+                    </svg><span>Гарантии надежности</span>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="container">
+          <h2 class="title-h2">Свои грузы нам доверяют</h2>
+          <div class="swiper-container">
+            <button class="swiper-button-prev">
+              <svg transform="rotate(270)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="clients__brand"><img src="img/clients/maz.png" alt="Брэнд &quot;МАЗ&quot;">
+                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__brand"><img src="img/clients/baz.png" alt="Брэнд &quot;БАЗ&quot;">
+                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__brand"><img src="img/clients/tonar.png" alt="Брэнд &quot;Тонар&quot;">
+                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__brand"><img src="img/clients/iveco.png" alt="Брэнд &quot;IvecoAMT&quot;">
+                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="clients__brand"><img src="img/clients/iveco.png" alt="Брэнд &quot;IvecoAMT&quot;">
+                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                </div>
+              </div>
+            </div>
+            <button class="swiper-button-next">
+              <svg transform="rotate(90)">
+                <use href="./img/sprites/sprite.svg#angle"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!--Доверие-->
+      <section class="trust">
+        <div class="container">
+          <h2 class="title-h2">Почему грузовые перевозки стоит доверить компании «ТБ Логистик»</h2>
+          <div class="trust__row">
+            <div class="trust__left">
+              <ul>
+                <li>Оформляем закрывающие документы в течение 3 рабочих дней с момента разгрузки</li>
+                <li>Застрахованы абсолютно все грузы клиентов</li>
+                <li>Предоставляем персонального менеджера, который будет на связи 24 часа/7 дней</li>
+                <li>Решаем транспортные задачи любой сложности и масштаба</li>
+              </ul>
+            </div>
+            <div class="trust__right">
+              <div class="trust__block trust__quality">
+                <div class="img"><img src="./img/icons/arrow-up.svg" alt="" aria-hidden="true"></div><b class="title-h2">Высокое качество услуг</b>
+                <p>Более 20 успешных лет в сфере грузовых перевозок, лидирующее положение на рынке.</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Под высоким качеством услуг мы понимаем:</b>
+                  <ul>
+                    <li>100% гарантию сохранности груза</li>
+                    <li>стабильные сроки выхода транспорта</li>
+                    <li>лучший сервис в отрасли</li>
+                    <li>профессиональную команду</li>
+                    <li>внимание к каждому клиенту</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="trust__block trust__sell">
+                <div class="img"><img src="./img/icons/purse.svg" alt="" aria-hidden="true"></div><b class="title-h2">Низкие цены</b>
+                <p>Индивидуальные тарифные планы для постоянных клиентов</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Низкие цены на перевозку грузов по России - это:</b>
+                  <ul>
+                    <li>индивидуальные тарифные планы</li>
+                    <li>низкие тарифы на грузовые перевозки</li>
+                    <li>скидка 10% за онлайн-заказ</li>
+                    <li>бесплатное ответственное хранение</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="container row">
+          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:88000000000" title="Позвонить на номер 8 800 000-00-00">8 800 000-00-00</a></div>
+                <div class="form cta__form">
+                  <div class="form__inputs">
+                    <label class="input">
+                      <input data-name type="text" required><span>ФИО</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="text" required><span>Телефон</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="email" required><span>Email</span>
+                    </label><small>Я согласен(согласна) на обработку 
+                      <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+                    <button class="btn">Оставить заявку</button>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+              <div class="navbar footer__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                      <svg>
+                        <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
+                        <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
+                        <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                      </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+                <nav class="navbar__nav">
+                  <ul>
+                    <li><a href="autopark.html">О компании</a></li>
+                    <li><a href="#service">Услуги</a></li>
+                    <li><a href="#tariffs">Тарифы</a></li>
+                    <li><a href="#info">Информация</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="contacts-block footer__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#envelope"></use>
+                  </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#phone"></use>
+                  </svg><span>8 800-125-00-00</span></a></div>
+          <div class="footer__buttons">
+            <button class="btn" data-modal="form">Онлайн заявка</button>
+            <button class="btn">Калькулятор</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container"><small>© 2020 ТБ Логистик. Все права защищены</small><a class="footer__bottom-web2" href="https://web2.ru" target="_blank" title="Переход на сайт web2.ru"> 
+            <svg width="24" height="24">
+              <use href="./img/sprites/sprite.svg#web2ru"></use>
+            </svg><span>Разработка сайта web2.ru</span></a></div>
+      </div>
+      <button class="scroll-up">
+        <svg width="12" height="8">
+          <use class="scroll-up__arrow" href="./img/sprites/sprite.svg#angle"></use>
+        </svg>
+      </button>
+    </footer>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

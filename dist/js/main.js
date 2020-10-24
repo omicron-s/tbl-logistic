@@ -269,15 +269,14 @@ __webpack_require__.r(__webpack_exports__);
 const clients = () => {
   swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
 
-  var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-container', {
+  var clientsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.clients .swiper-container', {
     slidesPerView: 1,
-    speed: 400,
+    speed: 800,
     spaceBetween: 30,
     centeredSlides: true,
-    autoHeight: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.clients .swiper-button-next',
+      prevEl: '.clients .swiper-button-prev',
     },
     // pagination: {
     //   el: '.swiper-pagination',
@@ -297,6 +296,7 @@ const clients = () => {
       },
       // when window width is >= 1024px
       1024: {
+
         slidesPerView: 4,
         centeredSlides: false,
       },
@@ -306,6 +306,124 @@ const clients = () => {
         centeredSlides: false,
       },
     },
+  });
+};
+
+
+/***/ }),
+
+/***/ "../views/blocks/product-goods/product-goods.js":
+/*!******************************************************!*\
+  !*** ../views/blocks/product-goods/product-goods.js ***!
+  \******************************************************/
+/*! exports provided: productGoods */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "productGoods", function() { return productGoods; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../../node_modules/swiper/swiper.esm.js");
+
+
+const productGoods = () => {
+  swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"]]);
+
+  var productGoods = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.product-goods .swiper-container', {
+    slidesPerView: 1,
+    speed: 800,
+    spaceBetween: 30,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.product-goods .swiper-button-next',
+      prevEl: '.product-goods .swiper-button-prev',
+    },
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+      // when window width is >= 540px
+      540: {
+        slidesPerView: 2,
+        centeredSlides: true,
+        spaceBetween: 30,
+      },
+      // when window width is >= 768px
+      768: {
+        slidesPerView: 2,
+        centeredSlides: false,
+        spaceBetween: 30,
+      },
+      // when window width is >= 1024px
+      1024: {
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 0,
+      },
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 0,
+      },
+    },
+  });
+};
+
+
+/***/ }),
+
+/***/ "../views/blocks/product-slider/product-slider.js":
+/*!********************************************************!*\
+  !*** ../views/blocks/product-slider/product-slider.js ***!
+  \********************************************************/
+/*! exports provided: productSlider */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "productSlider", function() { return productSlider; });
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "../../node_modules/swiper/swiper.esm.js");
+
+
+
+const productSlider = () => {
+  swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]);
+
+  var productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.products-slider .swiper-container', {
+    slidesPerView: 1,
+    speed: 800,
+    spaceBetween: 60,
+    // centeredSlides: true,
+    navigation: {
+      nextEl: '.products-slider .swiper-button-next',
+      prevEl: '.products-slider .swiper-button-prev',
+    },
+    pagination: {
+      el: '.products-slider .swiper-pagination',
+      clickable: true,
+    },
+    observer: true,
+    observeParents: true,
+  });
+};
+
+
+/***/ }),
+
+/***/ "../views/blocks/product-table/product-table.js":
+/*!******************************************************!*\
+  !*** ../views/blocks/product-table/product-table.js ***!
+  \******************************************************/
+/*! exports provided: tableBtn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tableBtn", function() { return tableBtn; });
+
+const tableBtn = () => {
+  $('.product-table').on('click', '.btn-select', function () {
+    $(this).siblings('.btn-select').removeAttr('disabled');
+    $(this).attr('disabled', 'disabled');
   });
 };
 
@@ -659,11 +777,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
 /* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
 /* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
+/* harmony import */ var _blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @blocks/product-slider/product-slider */ "../views/blocks/product-slider/product-slider.js");
+/* harmony import */ var _blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @blocks/product-table/product-table */ "../views/blocks/product-table/product-table.js");
+/* harmony import */ var _blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @blocks/product-goods/product-goods */ "../views/blocks/product-goods/product-goods.js");
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 /*!полифил для :focus-visible*/
+
+
+
+
 
 
 
@@ -682,15 +807,13 @@ jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
   Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_4__["clients"])();
   Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_8__["trust"])();
   Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
+  Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_9__["productSlider"])();
+  Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_10__["tableBtn"])();
+  Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_11__["productGoods"])();
 });
 /* 
 
 //Blocks
-import '@components/form/form';
-
-import '@blocks/clients/clients';
-
-
 
 //полифил для IE, input-mask
 import 'core-js/stable/array/for-each';
