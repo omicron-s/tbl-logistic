@@ -768,7 +768,6 @@ textarea:focus {
   -webkit-box-shadow: 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
   box-shadow: 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
   outline: none;
-  border-radius: 2px;
 }
 
 input:focus {
@@ -1067,6 +1066,11 @@ h2 {
 
 .rf-map path.fill {
   color: #005bbb;
+}
+
+.calculate {
+  height: 120px;
+  margin: auto 0 -60px;
 }
 
 .calculate .button-swap {
@@ -1380,6 +1384,57 @@ h2 {
   text-decoration: underline;
 }
 
+.gost {
+  position: relative;
+  padding: 40px 0;
+}
+
+.gost .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gost__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 245px;
+  flex: 0 0 245px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  height: 245px;
+  margin: 0 90px 0 15px;
+  color: #eff5ff;
+}
+
+.gost__img svg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.gost__img img {
+  width: 70%;
+  max-width: 100%;
+  height: 70%;
+  max-height: 100%;
+}
+
+.gost__text {
+  margin: auto 0;
+  line-height: 1.7;
+}
+
 .advantages-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1391,7 +1446,7 @@ h2 {
   box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   background-color: #fff;
   border-radius: 2px;
-  margin-bottom: -60px;
+  margin: auto 0 -60px;
 }
 
 .advantages-block li {
@@ -1512,10 +1567,12 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  z-index: 1;
   padding: 35px 50px;
   background-color: #005bbb;
   border-radius: 0 2px 2px 0;
-  z-index: 1;
+  -webkit-transition: background-color 0.1s;
+  transition: background-color 0.1s;
 }
 
 .filter__submit:hover {
@@ -1538,12 +1595,26 @@ h2 {
 .heading {
   position: relative;
   z-index: 0;
+  height: 100%;
+  max-height: 660px;
   padding: 180px 0 0;
   background-color: #3081ce;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: #fff;
+}
+
+.heading .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100%;
 }
 
 .heading .broads {
@@ -1566,7 +1637,7 @@ h2 {
 
 .heading__block .btn-white {
   width: 170px;
-  margin-bottom: 145px;
+  margin-bottom: 25px;
 }
 
 .heading.no-broads {
@@ -1595,6 +1666,14 @@ h2 {
 
 .heading.refresher .subtitle {
   max-width: 370px;
+}
+
+.heading.tanker {
+  background-image: url("../img/heading/bg-tanker.jpg");
+}
+
+.heading.tanker .btn-white {
+  margin-top: 25px;
 }
 
 .includes {
@@ -1848,9 +1927,19 @@ h2 {
 }
 
 .product-card__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 47%;
   flex: 1 1 47%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 25px;
 }
 
 .product-card__left img {
@@ -2199,16 +2288,21 @@ h2 {
 
 .trust__left li:before {
   content: url("../img/icons/check.svg");
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 25px;
   height: 25px;
   margin: 2px 30px 0 0;
-  padding: 3px 0 0;
-  text-align: center;
   border-radius: 50%;
-  font-size: 16px;
   background-color: #fff;
 }
 
@@ -2974,10 +3068,6 @@ html.fixed .modal-overlay {
 }
 
 @media (min-width: 460px) {
-  .calculate {
-    height: 120px;
-  }
-
   .calculate .button-swap {
     -webkit-transform: rotate(0);
     transform: rotate(0);
@@ -3159,7 +3249,6 @@ html.fixed .modal-overlay {
 
 @media (min-width: 1200px) {
   .calculate {
-    margin: 0 0 -60px;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
@@ -3209,8 +3298,13 @@ html.fixed .modal-overlay {
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12), 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
   }
 
+  .calculate .calculate__submit:not(.focus-visible) {
+    -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
+    box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
+  }
+
   .advantages-block {
-    margin: 0 -15px -50px;
+    margin: auto -15px -60px;
     border-radius: 0;
   }
 
@@ -3230,7 +3324,6 @@ html.fixed .modal-overlay {
   }
 
   .product-card {
-    margin: 0 -15px 20px;
     padding: 15px;
   }
 
@@ -3245,6 +3338,10 @@ html.fixed .modal-overlay {
   .product-table .table-wrapper {
     margin: 50px -15px;
     border-radius: 0;
+  }
+
+  .products {
+    margin: 0 -15px;
   }
 
   .footer__navbar .navbar__nav {
@@ -3329,6 +3426,26 @@ html.fixed .modal-overlay {
     padding: 25px 15px;
   }
 
+  .gost__img {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  .gost__img img {
+    opacity: 0.2;
+  }
+
+  .gost__text {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
   .filter {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -3379,8 +3496,9 @@ html.fixed .modal-overlay {
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12), 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
   }
 
-  .heading {
-    padding: 140px 0 0;
+  .filter .filter__submit:not(.focus-visible) {
+    -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
+    box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
 
   .heading .broads {
@@ -3394,8 +3512,8 @@ html.fixed .modal-overlay {
     text-align: center;
   }
 
-  .heading__block .btn-white {
-    margin-bottom: 25px;
+  .heading__block .subtitle {
+    margin: 0 auto 40px;
   }
 
   .heading.no-broads {
@@ -3423,10 +3541,6 @@ html.fixed .modal-overlay {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-
-  .product-card__left img {
-    margin: auto;
   }
 
   .product-goods .df {
@@ -3684,7 +3798,7 @@ html.fixed .modal-overlay {
 
   .calculate {
     height: 300px;
-    margin: 50px -15px -163px;
+    margin: auto -15px -163px;
   }
 
   .calculate .calculate__form {
@@ -3698,11 +3812,16 @@ html.fixed .modal-overlay {
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
 
+  .calculate .calculate__from {
+    border-radius: 2px 2px 0 0;
+  }
+
   .calculate .calculate__submit {
     border-radius: 0 0 2px 2px;
   }
 
   .calculate .calculate__swap {
+    border-radius: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -3737,6 +3856,15 @@ html.fixed .modal-overlay {
     transform: rotate(290deg);
   }
 
+  .heading {
+    max-height: 660px;
+    padding: 140px 0 0;
+  }
+
+  .heading.main {
+    max-height: 660px;
+  }
+
   .product-card__right {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3752,10 +3880,6 @@ html.fixed .modal-overlay {
 @media (min-width: 460px) and (max-width: 767px) {
   .advantages .container {
     padding: 160px 0 25px;
-  }
-
-  .calculate {
-    margin: 80px -15px -60px;
   }
 
   .calculate .calculate__form {
@@ -3777,11 +3901,16 @@ html.fixed .modal-overlay {
     -ms-flex: 0 1 30px;
     flex: 0 1 30px;
   }
+
+  .heading {
+    max-height: 560px;
+    padding: 140px 0 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .calculate {
-    margin: 0 -15px -60px;
+    margin: auto -15px -60px;
   }
 
   .calculate .calculate__form {
@@ -3854,6 +3983,11 @@ html.fixed .modal-overlay {
   .filter .filter__submit:focus {
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12), 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12), 0 0 0 2px #2784e5, inset 0 0 0 1px #000;
+  }
+
+  .filter .filter__submit:not(.focus-visible) {
+    -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
+    box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
 }
 
