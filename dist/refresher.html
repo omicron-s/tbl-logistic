@@ -13,13 +13,13 @@
     <header class="header">
       <div class="container">
         <div class="header__head">
-              <div class="contacts-block header__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+              <div class="contacts-block header__contacts-block"><a class="contacts-block__mail" href="mailto:info@tb-l.ru" title="Написать письмо на: info@tb-l.ru"> 
                   <svg>
                     <use href="./img/sprites/sprite.svg#envelope"></use>
-                  </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                  </svg><span>info@tb-l.ru</span></a><a class="contacts-block__tel" href="tel:+74991439680" title="Позвонить на номер: 8 (499) 143-96-80">
                   <svg>
                     <use href="./img/sprites/sprite.svg#phone"></use>
-                  </svg><span>8 800-125-00-00</span></a></div>
+                  </svg><span>8 (499) 143-96-80</span></a></div>
           <div class="header__right">
             <div class="header__login">
               <svg>
@@ -34,9 +34,7 @@
         </div>
             <div class="navbar header__navbar"><a class="logo logo-hover navbar__logo" href="/">
                     <svg>
-                      <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
-                      <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
-                      <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                      <use href="./img/sprites/sprite.svg#logo"></use>
                     </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
               <nav class="navbar__nav">
                 <ul>
@@ -263,126 +261,190 @@
         <div class="container">
           <h2 class="title-h2">Цены на грузоперевозки рефрижераторами от 1,5 до 20 тонн</h2>
           <div class="buttons">
-            <button class="btn-select" disabled="disabled">по Москве</button>
-            <button class="btn-select">по России</button>
+            <button class="btn-select" disabled="disabled" data-table="moscow">по Москве</button>
+            <button class="btn-select" data-table="all">по России</button>
           </div>
-          <div class="table-wrapper">
-            <ul class="table table-head">
-              <li><span>Тип машин</span></li>
-              <li><span>Тариф «минимальный» 10 км за МКАД бесплатно</span>
-                <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
-              </li>
-              <li><span>Тариф базовый" в пределах МКАД</span>
-                <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
-              </li>
-              <li><span>Цена доп. часа, руб</span></li>
-              <li><span>Пробег за МКАД, <span>руб/км</span></span></li>
-              <li><span>Пропуск, руб</span>
-                <div class="tr-flex flex-33"><span>МКАД</span><span>ТТК</span><span>СК</span></div>
-              </li>
-            </ul>
-            <div class="table-body">
-                    <ul class="table">
-                      <li> <span>Соболь 1 т / 7 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
-                      </li>
-                      <li> <span>550</span></li>
-                      <li> <span>15</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>Портер 1 т / 8 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
-                      </li>
-                      <li> <span>550</span></li>
-                      <li> <span>15</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>Газель 1.5 т / 14 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>4+1</span><span>4500</span></div>
-                      </li>
-                      <li> <span>600</span></li>
-                      <li> <span>16</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1000</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>3 тонник 18 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>2+1</span><span>3800</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>5+1</span><span>4900</span></div>
-                      </li>
-                      <li> <span>600</span></li>
-                      <li> <span>20</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1200</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>5 тонник 35 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>2+1</span><span>4600</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>6+1</span><span>5900</span></div>
-                      </li>
-                      <li> <span>700</span></li>
-                      <li> <span>25</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>700</span><span>1400</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>10 тонник 55 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>7+1</span><span>7900</span></div>
-                      </li>
-                      <li> <span>900</span></li>
-                      <li> <span>30</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>---</span><span>900</span><span>1800</span></div>
-                      </li>
-                    </ul>
-                    <ul class="table">
-                      <li> <span>Фура 20 тн / 92 куб</span></li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
-                      </li>
-                      <li> 
-                        <div class="tr-flex flex-50"><span>7+1</span><span>10900</span></div>
-                      </li>
-                      <li> <span>1000</span></li>
-                      <li> <span>32</span></li>
-                      <li> 
-                        <div class="tr-flex flex-33"><span>1000</span><span>1000</span><span>2000</span></div>
-                      </li>
-                    </ul>
+          <div class="table-swap show" data-table="moscow">
+            <div class="table-wrapper">
+              <ul class="table table-head">
+                <li><span>Тип машин</span></li>
+                <li><span>Тариф «минимальный» 10 км за МКАД бесплатно</span>
+                  <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
+                </li>
+                <li><span>Тариф базовый" в пределах МКАД</span>
+                  <div class="tr-flex flex-50"><span>Смена, час</span><span>Цена, руб</span></div>
+                </li>
+                <li><span>Цена доп. часа, руб</span></li>
+                <li><span>Пробег за МКАД, <span>руб/км</span></span></li>
+                <li><span>Пропуск, руб</span>
+                  <div class="tr-flex flex-33"><span>МКАД</span><span>ТТК</span><span>СК</span></div>
+                </li>
+              </ul>
+              <div class="table-body">
+                      <ul class="table">
+                        <li> <span>Соболь 1 т / 7 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
+                        </li>
+                        <li> <span>550</span></li>
+                        <li> <span>15</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>Портер 1 т / 8 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>4+1</span><span>4400</span></div>
+                        </li>
+                        <li> <span>550</span></li>
+                        <li> <span>15</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>---</span><span>500</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>Газель 1.5 т / 14 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>2+1</span><span>2200</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>4+1</span><span>4500</span></div>
+                        </li>
+                        <li> <span>600</span></li>
+                        <li> <span>16</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1000</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>3 тонник 18 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>2+1</span><span>3800</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>5+1</span><span>4900</span></div>
+                        </li>
+                        <li> <span>600</span></li>
+                        <li> <span>20</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>600</span><span>1200</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>5 тонник 35 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>2+1</span><span>4600</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>6+1</span><span>5900</span></div>
+                        </li>
+                        <li> <span>700</span></li>
+                        <li> <span>25</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>700</span><span>1400</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>10 тонник 55 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>7+1</span><span>7900</span></div>
+                        </li>
+                        <li> <span>900</span></li>
+                        <li> <span>30</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>---</span><span>900</span><span>1800</span></div>
+                        </li>
+                      </ul>
+                      <ul class="table">
+                        <li> <span>Фура 20 тн / 92 куб</span></li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>---</span><span>---</span></div>
+                        </li>
+                        <li> 
+                          <div class="tr-flex flex-50"><span>7+1</span><span>10900</span></div>
+                        </li>
+                        <li> <span>1000</span></li>
+                        <li> <span>32</span></li>
+                        <li> 
+                          <div class="tr-flex flex-33"><span>1000</span><span>1000</span><span>2000</span></div>
+                        </li>
+                      </ul>
+              </div>
             </div>
           </div>
-          <button class="btn">Все тарифы</button>
+          <div class="table-swap" data-table="all">
+            <div class="table-tariff-wrapper">
+              <ul class="table-tariff table-head">
+                <li>Перевозки по регионам РФ</li>
+                <li>1.5 тонны</li>
+                <li>3 тонны</li>
+                <li>5 тонн</li>
+                <li>10 тонн</li>
+                <li>20 тонн</li>
+              </ul>
+              <div class="table-tariff-body">
+                      <ul class="table-tariff">
+                        <li>Санкт-Петербург-Москва</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+                      <ul class="table-tariff">
+                        <li>Ростов-на-Дону-Москва</li>
+                        <li>164970 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+                      <ul class="table-tariff">
+                        <li>Москва-Казань</li>
+                        <li>32870 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+                      <ul class="table-tariff">
+                        <li>Волгоград-Самара</li>
+                        <li>36330 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+                      <ul class="table-tariff">
+                        <li>Самара-Краснодар</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+                      <ul class="table-tariff">
+                        <li>Самара-Краснодар</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                        <li>111050 р.</li>
+                      </ul>
+              </div>
+            </div>
+            <button class="btn">Все тарифы</button>
+          </div>
         </div>
       </section>
       <!--Что мы перевозим-->
@@ -415,11 +477,6 @@
                 <div class="swiper-slide">
                         <div class="goods-card">
                           <div class="img"><img src="img/goods/household-chem.png" alt="Моющие средства и губки"></div><b>Доставка бытовой химии</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
-                        </div>
-                </div>
-                <div class="swiper-slide">
-                        <div class="goods-card">
-                          <div class="img"><img src="img/goods/food.png" alt="Сочная говядина"></div><b>Доставка продуктов питания</b><span>Широкий выбор экономически выгодных транспортных услуг</span>
                         </div>
                 </div>
               </div>
@@ -480,31 +537,36 @@
               </svg>
             </button>
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="clients__brand"><img src="img/clients/maz.png" alt="Брэнд &quot;МАЗ&quot;">
-                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="clients__brand"><img src="img/clients/baz.png" alt="Брэнд &quot;БАЗ&quot;">
-                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="clients__brand"><img src="img/clients/tonar.png" alt="Брэнд &quot;Тонар&quot;">
-                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="clients__brand"><img src="img/clients/iveco.png" alt="Брэнд &quot;IvecoAMT&quot;">
-                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="clients__brand"><img src="img/clients/iveco.png" alt="Брэнд &quot;IvecoAMT&quot;">
-                  <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
-                </div>
-              </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/x5.png" alt="Брэнд &quot;X5&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/danone.png" alt="Брэнд &quot;DANONE&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/schenker.png" alt="Брэнд &quot;SCHENKER&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/roskar.png" alt="Брэнд &quot;РОСКАР&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/dymov.png" alt="Брэнд &quot;ДЫМОВ&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="clients__brand"><img src="img/clients/megapolis.png" alt="Брэнд &quot;МЕГАПОЛИС&quot;">
+                        <button class="clients__letter" data-modal="zoom"><span class="clients__letter-title">Благодарственное письмо от компании ООО «Спутник»</span><span class="clients__letter-img"><img src="img/clients/letter.png" alt="Благодарственное письмо от компании ООО «Спутник»"></span></button>
+                      </div>
+                    </div>
             </div>
             <button class="swiper-button-next">
               <svg transform="rotate(90)">
@@ -565,7 +627,7 @@
       </section>
       <div class="cta">
         <div class="container row">
-          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:88000000000" title="Позвонить на номер 8 800 000-00-00">8 800 000-00-00</a></div>
+          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:+74991439680" title="Позвонить на номер 8 (499) 143-96-80">8 (499) 143-96-80</a></div>
                 <div class="form cta__form">
                   <div class="form__inputs">
                     <label class="input">
@@ -590,9 +652,7 @@
         <div class="row">
               <div class="navbar footer__navbar"><a class="logo logo-hover navbar__logo" href="/">
                       <svg>
-                        <use class="logo-left" href="./img/sprites/sprite.svg#logo-left"></use>
-                        <use class="logo-right" href="./img/sprites/sprite.svg#logo-right"></use>
-                        <use class="logo-bottom" href="./img/sprites/sprite.svg#logo-bottom"></use>
+                        <use href="./img/sprites/sprite.svg#logo"></use>
                       </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
                 <nav class="navbar__nav">
                   <ul>
@@ -604,13 +664,13 @@
                   </ul>
                 </nav>
               </div>
-              <div class="contacts-block footer__contacts-block"><a class="contacts-block__mail" href="mailto:111@mail.ru" title="Написать письмо на: 111@mail.ru"> 
+              <div class="contacts-block footer__contacts-block"><a class="contacts-block__mail" href="mailto:info@tb-l.ru" title="Написать письмо на: info@tb-l.ru"> 
                   <svg>
                     <use href="./img/sprites/sprite.svg#envelope"></use>
-                  </svg><span>111@mail.ru</span></a><a class="contacts-block__tel" href="tel:+88001250000" title="Позвонить на номер: 8 800-125-00-00">
+                  </svg><span>info@tb-l.ru</span></a><a class="contacts-block__tel" href="tel:+74991439680" title="Позвонить на номер: 8 (499) 143-96-80">
                   <svg>
                     <use href="./img/sprites/sprite.svg#phone"></use>
-                  </svg><span>8 800-125-00-00</span></a></div>
+                  </svg><span>8 (499) 143-96-80</span></a></div>
           <div class="footer__buttons">
             <button class="btn" data-modal="form">Онлайн заявка</button>
             <button class="btn">Калькулятор</button>

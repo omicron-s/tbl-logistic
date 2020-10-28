@@ -282,8 +282,6 @@ const clients = () => {
     //   el: '.swiper-pagination',
     //   clickable: true,
     // },
-    observer: true,
-    observeParents: true,
     breakpoints: {
       // when window width is >= 540px
       540: {
@@ -333,6 +331,7 @@ const productGoods = () => {
     speed: 800,
     spaceBetween: 30,
     centeredSlides: true,
+    loop: true,
     navigation: {
       nextEl: '.product-goods .swiper-button-next',
       prevEl: '.product-goods .swiper-button-prev',
@@ -401,8 +400,6 @@ const productSlider = () => {
       el: '.products-slider .swiper-pagination',
       clickable: true,
     },
-    observer: true,
-    observeParents: true,
   });
 };
 
@@ -422,8 +419,11 @@ __webpack_require__.r(__webpack_exports__);
 
 const tableBtn = () => {
   $('.product-table').on('click', '.btn-select', function () {
+    let table = $(this).attr('data-table');
     $(this).siblings('.btn-select').removeAttr('disabled');
     $(this).attr('disabled', 'disabled');
+    $('.table-swap').removeClass('show');
+    $('.table-swap[data-table=' + table + ']').addClass('show');
   });
 };
 
