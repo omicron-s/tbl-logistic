@@ -1883,7 +1883,6 @@ h2 {
 
 .navbar__menu .popup-menu {
   position: absolute;
-  z-index: -2;
   color: #000;
   font-weight: 500;
   font-size: 14px;
@@ -3897,6 +3896,7 @@ html.fixed .modal-overlay {
   }
 
   .navbar__menu .popup-menu {
+    z-index: -2;
     top: 0;
     right: 100%;
     left: -200%;
