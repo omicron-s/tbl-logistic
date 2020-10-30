@@ -198,7 +198,7 @@ const advantages = () => {
     });
   };
 
-  $(window).on('scroll load resize', function () {
+  $(window).on('scroll resize load', function () {
     let scroll = $(window).scrollTop() + window.innerHeight - 60;
 
     for (let i = 0; i < offsetArray.length; i++) {
@@ -852,20 +852,18 @@ global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
 
-jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
-  Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_3__["header"])();
-  Object(_blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_4__["navbar"])();
-  Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__["modal"])();
-  Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_6__["advantages"])();
-  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["calculate"])();
-  Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["liveMap"])();
-  Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_5__["clients"])();
-  Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_9__["trust"])();
-  Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
-  Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_10__["productSlider"])();
-  Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_11__["tableBtn"])();
-  Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_12__["productGoods"])();
-});
+Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_3__["header"])();
+Object(_blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_4__["navbar"])();
+Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__["modal"])();
+Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_6__["advantages"])();
+Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["calculate"])();
+Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["liveMap"])();
+Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_5__["clients"])();
+Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_9__["trust"])();
+Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
+Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_10__["productSlider"])();
+Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_11__["tableBtn"])();
+Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_12__["productGoods"])();
 /* 
 
 //Blocks
