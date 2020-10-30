@@ -322,15 +322,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "navbar", function() { return navbar; });
 
 const navbar = () => {
-  $('.navbar .navbar__menu').on('click', 'button', function () {
-    let windowWidth = window.innerWidth;
+  /* выбор меню */
+  let windowWidth;
+  $('.navbar__menu >li').on('click', '>button', function () {
+    windowWidth = window.innerWidth;
     if (windowWidth < 768) {
-      if ($(this).parent('li').hasClass('show')) {
-        $(this).parent('li').toggleClass('show');
-      } else {
-        $('.navbar__menu li').removeClass('show');
-        $(this).parent('li').toggleClass('show');
-      }
+      $('.navbar__menu li').removeClass('show');
+      $(this).parent('li').addClass('show');
+      $('.navbar__menu .popup-submenu').slideUp();
+      $('.navbar__menu .popup-menu li').removeClass('show');
+    }
+  });
+  /* кнопка назад */
+  $('.navbar__menu').on('click', '.back', function () {
+    $('.navbar__menu li').removeClass('show');
+    $('.navbar__menu .popup-submenu').slideUp();
+    $('.navbar__menu .popup-menu li').removeClass('show');
+  });
+  /* подменю */
+  $('.navbar__menu .popup-menu').on('click', 'button', function () {
+    windowWidth = window.innerWidth;
+    if (windowWidth < 768) {
+      $(this).siblings('.popup-submenu').slideToggle();
+      $(this).parent('li').toggleClass('show');
+    }
+  });
+  /* отмена слайда для большого экрана */
+  $(window).on('resize load', function () {
+    windowWidth = window.innerWidth;
+    if (windowWidth >= 768) {
+      $('.navbar__menu .popup-submenu').removeAttr('style');
+      $('.navbar__menu .popup-menu li').removeClass('show');
     }
   });
 };
