@@ -648,6 +648,7 @@ const header = () => {
     } else {
       $('.header__shadow').css('bottom', 0);
       $('.navbar__menu li').removeClass('show');
+      $('.navbar__menu .popup-submenu').slideUp();
     }
   });
   $(window).on('resize scroll', function () {
