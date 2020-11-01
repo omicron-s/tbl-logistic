@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Автопарк - Транс Бизнес Логистик</title>
+    <title>Калькулятор - Транс Бизнес Логистик</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
     <link rel="stylesheet" href="./styles/main.css">
@@ -185,88 +185,103 @@
       </div>
     </div>
     <!--Автопарк-->
-    <div class="heading-small autopark">
+    <div class="heading-small tariffs">
       <div class="container">
-        <div class="broads"><a href="#">Главная</a> / <a href="#">Автопарк</a></div>
-        <h1>Автопарк</h1>
-        <div class="filter">
-          <div class="filter__block left"><span>Тип кузова:</span>
-            <div class="checkboxes">
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Тент</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Фергон</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Изотрема</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Рефрижератор</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Борт</span>
-                  </label>
-            </div>
+        <div class="broads"><a href="#">Главная</a> / <a href="#">Тарифы</a></div>
+        <h1>Тарифы</h1>
+        <div class="filter"><span>Тип перевозки:</span>
+          <div class="checkboxes">
+                <label class="input-checkbox">
+                  <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Тент</span>
+                </label>
+                <label class="input-checkbox">
+                  <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Рефрижератор</span>
+                </label>
           </div>
-          <div class="filter__block right"><span>Грузоподъемность:</span>
-            <div class="checkboxes">
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="cap" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">до 1 т</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="cap" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">1.5 т</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="cap" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">5 т</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="cap" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">10 т</span>
-                  </label>
-                  <label class="input-checkbox">
-                    <input class="visually-hidden" name="cap" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">20 т</span>
-                  </label>
-            </div>
-          </div>
-          <button class="filter__submit"><img src="img/icons/arrow-cycle.svg" alt=""><span>Сбросить все</span></button>
         </div>
       </div>
     </div>
     <main>
-      <div class="products">
+      <section class="section-block about-block">
         <div class="container">
-                <div class="product-card"><b class="product-card__title">Тент с г/п 1 тонна</b>
-                  <div class="product-card__row">
-                    <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 1 тонна" title="Грузовик типа: Тент с г/п 1 тонна"></div>
-                    <div class="product-card__right">
-                      <div class="product-card__stats"><b>Характеристики:</b>
-                        <ul>
-                          <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">13.6 м</span></li>
-                          <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">2.4 м</span></li>
-                          <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">2.6 м</span></li>
-                          <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">20000 кг</span></li>
-                          <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">86 м<sup>3</sup></span></li>
-                        </ul>
-                      </div>
-                      <button class="btn">Заказать</button>
-                    </div>
-                  </div>
+          <div class="section-block__img">
+            <svg>
+              <use href="./img/sprites/sprite.svg#round-bg"></use>
+            </svg><img src="img/work-sections/map.png" alt="Карта с навигацией">
+          </div>
+          <div class="section-block__text">
+            <h2 class="title-h2">О компании ТБ Логистик</h2>
+            <p>Компания «ТБ Логистик» специализируется на оказании автомобильных грузоперевозок любой сложности с 2001 года.</p>
+            <p>Наши технические и организационные возможности позволяют обслуживать маршруты не только в Московском регионе  по месту нахождения  автобазы, но и по всей территории Российской Федерации.</p>
+            <p>Мы располагаем большим автопарком грузовой техники, с помощью которой могут быть перевезены на нужное расстояние различные типы грузов: промышленные и бытовые, стандартные и нестандартные. В частности, всегда к Вашим услугам евротент, грузовые машины рефрижераторного и изотермического типов.</p>
+          </div>
+        </div>
+      </section>
+      <!--Доверие-->
+      <section class="trust">
+        <div class="container">
+          <h2 class="title-h2">Почему грузовые перевозки стоит доверить компании «ТБ Логистик»</h2>
+          <div class="trust__row">
+            <div class="trust__left">
+              <ul>
+                <li>Оформляем закрывающие документы в течение 3 рабочих дней с момента разгрузки</li>
+                <li>Застрахованы абсолютно все грузы клиентов</li>
+                <li>Предоставляем персонального менеджера, который будет на связи 24 часа/7 дней</li>
+                <li>Решаем транспортные задачи любой сложности и масштаба</li>
+              </ul>
+            </div>
+            <div class="trust__right">
+              <div class="trust__block trust__quality">
+                <div class="img"><img src="./img/icons/arrow-up.svg" alt="" aria-hidden="true"></div><b class="title-h2">Высокое качество услуг</b>
+                <p>Более 20 успешных лет в сфере грузовых перевозок, лидирующее положение на рынке.</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Под высоким качеством услуг мы понимаем:</b>
+                  <ul>
+                    <li>100% гарантию сохранности груза</li>
+                    <li>стабильные сроки выхода транспорта</li>
+                    <li>лучший сервис в отрасли</li>
+                    <li>профессиональную команду</li>
+                    <li>внимание к каждому клиенту</li>
+                  </ul>
                 </div>
-                <div class="product-card"><b class="product-card__title">Тент с г/п 2 тонна</b>
-                  <div class="product-card__row">
-                    <div class="product-card__left"><img src="img/product/1.png" alt="Грузовик типа: Тент с г/п 2 тонна" title="Грузовик типа: Тент с г/п 2 тонна"></div>
-                    <div class="product-card__right">
-                      <div class="product-card__stats"><b>Характеристики:</b>
-                        <ul>
-                          <li><span class="stat">Длина кузова</span><span class="border"></span><span class="number">23.6 м</span></li>
-                          <li><span class="stat">Ширина кузова</span><span class="border"></span><span class="number">3.4 м</span></li>
-                          <li><span class="stat">Высота кузова</span><span class="border"></span><span class="number">4.6 м</span></li>
-                          <li><span class="stat">Грузоподъемность</span><span class="border"></span><span class="number">50000 кг</span></li>
-                          <li><span class="stat">Объем кузова</span><span class="border"></span><span class="number">786 м<sup>3</sup></span></li>
-                        </ul>
-                      </div>
-                      <button class="btn">Заказать</button>
-                    </div>
+              </div>
+              <div class="trust__block trust__sell">
+                <div class="img"><img src="./img/icons/purse.svg" alt="" aria-hidden="true"></div><b class="title-h2">Низкие цены</b>
+                <p>Индивидуальные тарифные планы для постоянных клиентов</p>
+                <svg>
+                  <use href="img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <div class="trust__hover-block"><b>Низкие цены на перевозку грузов по России - это:</b>
+                  <ul>
+                    <li>индивидуальные тарифные планы</li>
+                    <li>низкие тарифы на грузовые перевозки</li>
+                    <li>скидка 10% за онлайн-заказ</li>
+                    <li>бесплатное ответственное хранение</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="container row">
+          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:+74991439680" title="Позвонить на номер 8 (499) 143-96-80">8 (499) 143-96-80</a></div>
+                <div class="form cta__form">
+                  <div class="form__inputs">
+                    <label class="input">
+                      <input data-name type="text" required><span>ФИО</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="text" required><span>Телефон</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="email" required><span>Email</span>
+                    </label><small>Я согласен(согласна) на обработку 
+                      <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+                    <button class="btn">Оставить заявку</button>
                   </div>
                 </div>
         </div>
