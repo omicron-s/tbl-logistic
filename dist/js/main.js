@@ -640,15 +640,25 @@ const header = () => {
   /*! Бургер-меню */
   $('.header').on('click', '.btn-burger', function () {
     let expanded = $(this).attr('aria-expanded') === 'true';
+    let body = $('body').width();
+    let scrollWidth = window.innerWidth - body;
     $(this).attr('aria-expanded', !expanded);
     $(this).toggleClass('open');
     $('.header').toggleClass('open');
     if ($(this).hasClass('open')) {
       burgerMenu();
+      $('html').css('overflow', 'hidden'); // надо поменять
+      if (scrollWidth > 0) {
+        $('body, .modal').css('padding-right', scrollWidth);
+        $('.header').css('right', scrollWidth);
+      }
     } else {
       $('.header__shadow').css('bottom', 0);
       $('.navbar__menu li').removeClass('show');
       $('.navbar__menu .popup-submenu').slideUp();
+      $('body, .header, .modal').css('padding-right', 0);
+      $('.header').css('right', 0);
+      $('html').css('overflow', 'auto'); // надо поменять
     }
   });
   $(window).on('resize scroll', function () {
@@ -820,22 +830,34 @@ const modal = () => {
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery/dist/jquery.min */ "../../node_modules/jquery/dist/jquery.min.js");
 /* harmony import */ var jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! focus-visible/dist/focus-visible.min */ "../../node_modules/focus-visible/dist/focus-visible.min.js");
-/* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @components/scroll-up/scroll-up */ "../views/components/scroll-up/scroll-up.js");
-/* harmony import */ var _layouts_header_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @layouts/header/header */ "../views/layouts/header/header.js");
-/* harmony import */ var _blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @blocks/navbar/navbar */ "../views/blocks/navbar/navbar.js");
-/* harmony import */ var _blocks_clients_clients__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @blocks/clients/clients */ "../views/blocks/clients/clients.js");
-/* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
-/* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
-/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
-/* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
-/* harmony import */ var _blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @blocks/product-slider/product-slider */ "../views/blocks/product-slider/product-slider.js");
-/* harmony import */ var _blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @blocks/product-table/product-table */ "../views/blocks/product-table/product-table.js");
-/* harmony import */ var _blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @blocks/product-goods/product-goods */ "../views/blocks/product-goods/product-goods.js");
+/* harmony import */ var core_js_stable_array_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/stable/array/for-each */ "../../node_modules/core-js/stable/array/for-each.js");
+/* harmony import */ var core_js_stable_array_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_stable_array_for_each__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_stable_array_includes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/stable/array/includes */ "../../node_modules/core-js/stable/array/includes.js");
+/* harmony import */ var core_js_stable_array_includes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_stable_array_includes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_stable_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/stable/dom-collections/for-each */ "../../node_modules/core-js/stable/dom-collections/for-each.js");
+/* harmony import */ var core_js_stable_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_stable_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-visible/dist/focus-visible.min */ "../../node_modules/focus-visible/dist/focus-visible.min.js");
+/* harmony import */ var focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_visible_dist_focus_visible_min__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @components/scroll-up/scroll-up */ "../views/components/scroll-up/scroll-up.js");
+/* harmony import */ var _layouts_header_header__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @layouts/header/header */ "../views/layouts/header/header.js");
+/* harmony import */ var _blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @blocks/navbar/navbar */ "../views/blocks/navbar/navbar.js");
+/* harmony import */ var _blocks_clients_clients__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @blocks/clients/clients */ "../views/blocks/clients/clients.js");
+/* harmony import */ var _blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @blocks/advantages/advantages */ "../views/blocks/advantages/advantages.js");
+/* harmony import */ var _blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @blocks/calculate/calculate */ "../views/blocks/calculate/calculate.js");
+/* harmony import */ var _layouts_modal_modal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @layouts/modal/modal */ "../views/layouts/modal/modal.js");
+/* harmony import */ var _blocks_trust_trust__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @blocks/trust/trust */ "../views/blocks/trust/trust.js");
+/* harmony import */ var _blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @blocks/product-slider/product-slider */ "../views/blocks/product-slider/product-slider.js");
+/* harmony import */ var _blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @blocks/product-table/product-table */ "../views/blocks/product-table/product-table.js");
+/* harmony import */ var _blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @blocks/product-goods/product-goods */ "../views/blocks/product-goods/product-goods.js");
+/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! svg4everybody/dist/svg4everybody.min */ "../../node_modules/svg4everybody/dist/svg4everybody.min.js");
+/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16__);
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
+
+
+
+
 
 /*!полифил для :focus-visible*/
 
@@ -852,31 +874,23 @@ global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
 
-Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_3__["header"])();
-Object(_blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_4__["navbar"])();
-Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_8__["modal"])();
-Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_6__["advantages"])();
-Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["calculate"])();
-Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_7__["liveMap"])();
-Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_5__["clients"])();
-Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_9__["trust"])();
-Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_2__["scrollUp"])();
-Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_10__["productSlider"])();
-Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_11__["tableBtn"])();
-Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_12__["productGoods"])();
-/* 
+Object(_layouts_header_header__WEBPACK_IMPORTED_MODULE_6__["header"])();
+Object(_blocks_navbar_navbar__WEBPACK_IMPORTED_MODULE_7__["navbar"])();
+Object(_layouts_modal_modal__WEBPACK_IMPORTED_MODULE_11__["modal"])();
+Object(_blocks_advantages_advantages__WEBPACK_IMPORTED_MODULE_9__["advantages"])();
+Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_10__["calculate"])();
+Object(_blocks_calculate_calculate__WEBPACK_IMPORTED_MODULE_10__["liveMap"])();
+Object(_blocks_clients_clients__WEBPACK_IMPORTED_MODULE_8__["clients"])();
+Object(_blocks_trust_trust__WEBPACK_IMPORTED_MODULE_12__["trust"])();
+Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_5__["scrollUp"])();
+Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_13__["productSlider"])();
+Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_14__["tableBtn"])();
+Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_15__["productGoods"])();
 
-//Blocks
-
-//полифил для IE, input-mask
-import 'core-js/stable/array/for-each';
-import 'core-js/stable/array/includes';
-import 'core-js/stable/dom-collections/for-each';
-// полифилы для IE svg
-import 'svg4everybody';
-$(() => {
-  $('svg').attr('focusable', 'false');
-}); */
+jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
+  svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16___default()();
+  jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()('svg').attr('focusable', 'false');
+});
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "../../node_modules/webpack/buildin/global.js")))
 
