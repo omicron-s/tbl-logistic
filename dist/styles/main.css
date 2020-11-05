@@ -1576,15 +1576,6 @@ h2 {
   width: 100%;
 }
 
-.heading.about .rf-map {
-  z-index: -1;
-  left: 20%;
-}
-
-.heading.about .rf-map path {
-  color: #eff1f2;
-}
-
 .advantages-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2646,12 +2637,19 @@ h2 {
   background-color: #eff1f2;
 }
 
+.regional-map {
+  position: relative;
+}
+
 .regional-map__region {
   color: #005bbb;
+  fill: rgba(88, 169, 255, 0);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .regional-map__region:hover {
-  fill: #58a9ff;
+  fill: rgba(88, 169, 255, 0.5);
 }
 
 .regional-map__region:hover .regional-map__marker {
@@ -2660,6 +2658,37 @@ h2 {
 
 .regional-map__region .area path {
   fill: #fff;
+  stroke: #f0f6fa;
+}
+
+.regional-map__marker {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.regional-map li {
+  position: absolute;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 12px 30px rgba(0, 20, 59, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 20, 59, 0.12);
+}
+
+.regional-map li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  width: 0;
+  height: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-top: 3px solid transparent;
+  border-right: 12px solid #fff;
+  border-bottom: 3px solid transparent;
+  -webkit-box-shadow: 0 0 30px rgba(0, 20, 59, 0.12);
+  box-shadow: 0 0 30px rgba(0, 20, 59, 0.12);
 }
 
 .section-block {
