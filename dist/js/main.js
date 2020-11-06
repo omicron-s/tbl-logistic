@@ -480,6 +480,69 @@ const tableBtn = () => {
 
 /***/ }),
 
+/***/ "../views/blocks/regions/regions.js":
+/*!******************************************!*\
+  !*** ../views/blocks/regions/regions.js ***!
+  \******************************************/
+/*! exports provided: regions */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "regions", function() { return regions; });
+
+const regions = () => {
+  let region = $('.regional-map__region');
+
+  /* Позиционирование блоков ФО */
+  $(window).on('resize load', function () {
+    let windowWidth = window.innerWidth;
+    for (let i = 0; i < region.length; i++) {
+      let idList = '#' + $(region[i]).attr('id') + 'List';
+      let mapOffset = $('.regional-map').offset();
+      let markerOffset = $(region[i]).find('.regional-map__marker').offset();
+      let idListHeight = $(idList).outerHeight() / 2;
+
+      $(idList).css('left', markerOffset.left - mapOffset.left + 40);
+      $(idList).css(
+        'top',
+        markerOffset.top - mapOffset.top - idListHeight + 12
+      );
+    }
+    if (windowWidth >= 768) {
+      /* Добавляем классы по ховеру */
+      $(region).on('mouseenter', function () {
+        let idList = '#' + $(this).attr('id') + 'List';
+
+        $(this).addClass('hover');
+        $(idList).addClass('show');
+      });
+
+      /* Убираем классы по ховеру, кроме тултипа */
+      $(region).on('mouseleave', function (e) {
+        let target = $(e.relatedTarget);
+
+        if (!target.is('.regional-map li, .regional-map li *')) {
+          $(region).removeClass('hover');
+          $('.regional-map li').removeClass('show');
+        }
+      });
+      /* Убираем классы по ховеру, если выйти из тултипа не в родителя */
+      $('.regional-map li').on('mouseleave', function (e) {
+        let target = $(e.relatedTarget);
+
+        if (!target.is(region)) {
+          $(region).removeClass('hover');
+          $(this).removeClass('show');
+        }
+      });
+    }
+  });
+};
+
+
+/***/ }),
+
 /***/ "../views/blocks/trust/trust.js":
 /*!**************************************!*\
   !*** ../views/blocks/trust/trust.js ***!
@@ -849,8 +912,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @blocks/product-slider/product-slider */ "../views/blocks/product-slider/product-slider.js");
 /* harmony import */ var _blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @blocks/product-table/product-table */ "../views/blocks/product-table/product-table.js");
 /* harmony import */ var _blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @blocks/product-goods/product-goods */ "../views/blocks/product-goods/product-goods.js");
-/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! svg4everybody/dist/svg4everybody.min */ "../../node_modules/svg4everybody/dist/svg4everybody.min.js");
-/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _blocks_regions_regions__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @blocks/regions/regions */ "../views/blocks/regions/regions.js");
+/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! svg4everybody/dist/svg4everybody.min */ "../../node_modules/svg4everybody/dist/svg4everybody.min.js");
+/* harmony import */ var svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_17__);
 
 
 global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
@@ -860,6 +924,7 @@ global.$ = jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default.a;
 
 
 /*!полифил для :focus-visible*/
+
 
 
 
@@ -886,9 +951,10 @@ Object(_components_scroll_up_scroll_up__WEBPACK_IMPORTED_MODULE_5__["scrollUp"])
 Object(_blocks_product_slider_product_slider__WEBPACK_IMPORTED_MODULE_13__["productSlider"])();
 Object(_blocks_product_table_product_table__WEBPACK_IMPORTED_MODULE_14__["tableBtn"])();
 Object(_blocks_product_goods_product_goods__WEBPACK_IMPORTED_MODULE_15__["productGoods"])();
+Object(_blocks_regions_regions__WEBPACK_IMPORTED_MODULE_16__["regions"])();
 
 jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()(() => {
-  svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_16___default()();
+  svg4everybody_dist_svg4everybody_min__WEBPACK_IMPORTED_MODULE_17___default()();
   jquery_dist_jquery_min__WEBPACK_IMPORTED_MODULE_0___default()('svg').attr('focusable', 'false');
 });
 

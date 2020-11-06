@@ -2635,10 +2635,45 @@ h2 {
 
 .regions {
   background-color: #eff1f2;
+  padding: 165px 0 0;
+}
+
+.regions .title {
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #005bbb;
+}
+
+.regions__info {
+  max-width: 750px;
+}
+
+.regions__block {
+  margin-top: 40px;
+}
+
+.regions__block a {
+  position: relative;
+  z-index: 1;
+}
+
+.regions__block a:hover {
+  text-decoration: underline;
+}
+
+.regions__block .btn {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 270px;
+  margin-top: 20px;
 }
 
 .regional-map {
+  text-align: right;
   position: relative;
+  margin-top: -270px;
 }
 
 .regional-map__region {
@@ -2648,17 +2683,19 @@ h2 {
   transition: 0.1s;
 }
 
+.regional-map__region .area path {
+  fill: #fff;
+  stroke: #f0f6fa;
+}
+
+.regional-map__region.hover,
 .regional-map__region:hover {
   fill: rgba(88, 169, 255, 0.5);
 }
 
+.regional-map__region.hover .regional-map__marker,
 .regional-map__region:hover .regional-map__marker {
   color: #fff;
-}
-
-.regional-map__region .area path {
-  fill: #fff;
-  stroke: #f0f6fa;
 }
 
 .regional-map__marker {
@@ -2666,18 +2703,19 @@ h2 {
   transition: 0.1s;
 }
 
+.regional-map svg {
+  max-width: 100%;
+}
+
 .regional-map li {
-  position: absolute;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 12px 30px rgba(0, 20, 59, 0.12);
-  box-shadow: 0 12px 30px rgba(0, 20, 59, 0.12);
+  z-index: 10;
+  text-align: left;
 }
 
 .regional-map li::before {
   content: "";
   position: absolute;
+  z-index: -1;
   top: 50%;
   left: -12px;
   width: 0;
@@ -2687,8 +2725,15 @@ h2 {
   border-top: 3px solid transparent;
   border-right: 12px solid #fff;
   border-bottom: 3px solid transparent;
-  -webkit-box-shadow: 0 0 30px rgba(0, 20, 59, 0.12);
-  box-shadow: 0 0 30px rgba(0, 20, 59, 0.12);
+}
+
+.regional-map li p {
+  margin: 10px 0;
+}
+
+.regional-map li.show,
+.regional-map li:focus {
+  display: block;
 }
 
 .section-block {
@@ -4026,6 +4071,17 @@ html.fixed .modal-overlay {
     left: 100%;
   }
 
+  .regional-map li {
+    display: none;
+    position: absolute;
+    max-width: 260px;
+    background-color: #fff;
+    -webkit-box-shadow: -10px 0 20px 5px rgba(0, 20, 59, 0.12);
+    box-shadow: -10px 0 20px 5px rgba(0, 20, 59, 0.12);
+    border-radius: 5px;
+    padding: 15px;
+  }
+
   .trust {
     padding: 40px 0;
   }
@@ -4665,6 +4721,38 @@ html.fixed .modal-overlay {
     margin: 0 -15px;
   }
 
+  .regions {
+    text-align: center;
+  }
+
+  .regions__block {
+    margin-top: 15px;
+  }
+
+  .regions__block .btn {
+    margin: 20px auto 25px;
+  }
+
+  .regional-map {
+    margin: 0;
+  }
+
+  .regional-map svg {
+    display: none;
+  }
+
+  .regional-map li {
+    display: block;
+    position: static;
+    margin: 0 -15px;
+    padding: 25px 15px;
+    background-color: #eff5ff;
+  }
+
+  .regional-map li:nth-child(odd) {
+    background-color: #fff;
+  }
+
   .section-block__img {
     position: absolute;
     top: 0;
@@ -5167,6 +5255,18 @@ html.fixed .modal-overlay {
   .heading-small.autopark .filter .filter__submit:not(.focus-visible) {
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
+  }
+
+  .regions {
+    padding: 110px 0 25px;
+  }
+
+  .regions__block {
+    margin-top: 25px;
+  }
+
+  .regional-map {
+    margin-top: -200px;
   }
 }
 
