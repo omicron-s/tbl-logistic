@@ -2643,6 +2643,8 @@ h2 {
   line-height: 1.5;
   font-weight: 400;
   color: #005bbb;
+  z-index: 1;
+  position: relative;
 }
 
 .regions__info {
@@ -5162,6 +5164,18 @@ html.fixed .modal-overlay {
 
   .products-slider.type {
     padding: 140px 0 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .regions {
+    padding: 185px 0 0;
+  }
+}
+
+@media (max-width: 299px) {
+  .regions {
+    padding: 450px 0 0;
   }
 }
 
