@@ -497,19 +497,20 @@ const regions = () => {
   /* Позиционирование блоков ФО */
   $(window).on('resize load', function () {
     let windowWidth = window.innerWidth;
-    for (let i = 0; i < region.length; i++) {
-      let idList = '#' + $(region[i]).attr('id') + 'List';
-      let mapOffset = $('.regional-map').offset();
-      let markerOffset = $(region[i]).find('.regional-map__marker').offset();
-      let idListHeight = $(idList).outerHeight() / 2;
 
-      $(idList).css('left', markerOffset.left - mapOffset.left + 40);
-      $(idList).css(
-        'top',
-        markerOffset.top - mapOffset.top - idListHeight + 12
-      );
-    }
     if (windowWidth >= 768) {
+      for (let i = 0; i < region.length; i++) {
+        let idList = '#' + $(region[i]).attr('id') + 'List';
+        let mapOffset = $('.regional-map').offset();
+        let markerOffset = $(region[i]).find('.regional-map__marker').offset();
+        let idListHeight = $(idList).outerHeight() / 2;
+
+        $(idList).css('left', markerOffset.left - mapOffset.left + 40);
+        $(idList).css(
+          'top',
+          markerOffset.top - mapOffset.top - idListHeight + 12
+        );
+      }
       /* Добавляем классы по ховеру */
       $(region).on('mouseenter', function () {
         let idList = '#' + $(this).attr('id') + 'List';

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Контакты - Транс Бизнес Логистик</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <div class="container">
+        <div class="header__head">
+              <div class="contacts-block header__contacts-block"><a class="contacts-block__mail" href="mailto:info@tb-l.ru" title="Написать письмо на: info@tb-l.ru"> 
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#envelope"></use>
+                  </svg><span>info@tb-l.ru</span></a><a class="contacts-block__tel" href="tel:+74991439680" title="Позвонить на номер: 8 (499) 143-96-80">
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#phone"></use>
+                  </svg><span>8 (499) 143-96-80</span></a></div>
+          <div class="header__right">
+            <div class="header__login">
+              <svg>
+                <use href="./img/sprites/sprite.svg#subtract"></use>
+              </svg><span>Личный кабинет</span>
+            </div>
+            <div class="header__buttons">
+              <button class="btn" data-modal="form">Онлайн заявка</button>
+              <button class="btn">Калькулятор</button>
+            </div>
+          </div>
+        </div>
+            <div class="navbar header__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                    <svg>
+                      <use href="./img/sprites/sprite.svg#logo"></use>
+                    </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+              <nav class="navbar__nav">
+                <ul class="navbar__menu">
+                  <li>
+                    <button>О компании 
+                      <svg>
+                        <use href="img/sprites/sprite.svg#triangle"></use>
+                      </svg>
+                    </button>
+                    <ul class="popup-menu">
+                      <li class="back">
+                        <button> 
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg><span>Назад</span>
+                        </button>
+                      </li>
+                      <li><a href="about.html">О нас</a></li>
+                      <li><a href="#">Сотрудничество</a></li>
+                      <li><a href="autopark.html">Автопарк</a></li>
+                      <li>
+                        <button>Вакансии
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg>
+                        </button>
+                        <ul class="popup-submenu">
+                          <li><a href="logist.html">Логист</a></li>
+                          <li><a href="driver.html">Водитель</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button>Услуги
+                      <svg>
+                        <use href="img/sprites/sprite.svg#triangle"></use>
+                      </svg>
+                    </button>
+                    <ul class="popup-menu">
+                      <li class="back">
+                        <button>
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg><span>Назад</span>
+                        </button>
+                      </li>
+                      <li><a href="tariffs-russia.html">Доставка по России</a></li>
+                      <li><a href="refresher.html">Рефрижераторные перевозки</a></li>
+                      <li><a href="tanker.html">Наливные грузы</a></li>
+                      <li><a href="#.html">Аренда спецтехники</a></li>
+                      <li><a href="#.html">Грузчики</a></li>
+                      <li>
+                        <button>Дополнительные услуги
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg>
+                        </button>
+                        <ul class="popup-submenu">
+                          <li><a href="#">Ответственное хранение</a></li>
+                          <li><a href="#">Страхование</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="tariffs.html">Тарифы</a></li>
+                  <li>
+                    <button>Информация
+                      <svg>
+                        <use href="img/sprites/sprite.svg#triangle"></use>
+                      </svg>
+                    </button>
+                    <ul class="popup-menu">
+                      <li class="back">
+                        <button> 
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg><span>Назад</span>
+                        </button>
+                      </li>
+                      <li><a href="#">Условия оплаты</a></li>
+                      <li><a href="refresher.html">Претензии</a></li>
+                      <li><a href="tanker.html">Документация</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                    <button class="btn-burger" aria-expanded="false"><span class="top"></span><span class="mid"></span><span class="bot"></span></button>
+              </nav>
+            </div>
+      </div>
+      <div class="header__shadow"></div>
+    </header>
+    <!--Модалки-->
+    <div class="modal-overlay"></div>
+    <div class="modal modal-personal" data-modal="personal" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Политика конфиденциальности</b>
+        <p>Предоставляя свои персональные данные <b>Пользователь</b> даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+        <ul>
+          <li>Осуществление клиентской поддержки</li>
+          <li>Получения <b>Пользователем</b> информации о маркетинговых событиях</li>
+          <li>Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.</li>
+        </ul>
+        <p>Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность <b>Пользователя/Покупателя</b> такая как:</p>
+        <ul>
+          <li>Фамилия, Имя, Отчество</li>
+          <li>Дата рождения</li>
+          <li>Контактный телефон</li>
+          <li>Адрес электронной почты</li>
+          <li>Почтовый адрес</li>
+        </ul>
+        <p>Персональные данные <b>Пользователей</b> хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+        <p>Администрация сайта обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:</p>
+        <ul>
+          <li>По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ.</li>
+          <li>Стратегическим партнерам, которые работают с администрацией сайта для предоставления продуктов и услуг, или тем из них, которые помогают администрацией сайта реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.</li>
+        </ul>
+        <p>Администрация сайта оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.</p>
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-form" data-modal="form" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Заказать звонок</b><span>Отправьте заявку и мы вам перезвоним в течение 10 минут</span>
+        <div class="form">
+          <div class="form__inputs">
+            <label class="input">
+              <input data-name type="text" required><span>Ваше Имя</span>
+            </label>
+            <label class="input">
+              <input data-tel type="text" required><span>Ваш Телефон</span>
+            </label><small>Нажимая на кнопку «Заказать», вы даете согласие на обработку своих 
+              <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+            <button class="btn">Отправить</button>
+          </div>
+        </div>
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal-zoom" data-modal="zoom" role="dialog" data-no-focus-lock>
+      <div class="modal__content"><b class="modal__title">Благодарственное</b><img src="img/clients/letter.png" alt="Благодарственное письмо">
+        <div class="modal__btn">
+          <button class="btn-close" title="Закрыть" aria-label="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+    <!--Автопарк-->
+    <div class="heading-small contacts">
+      <div class="container">
+        <div class="broads"><a href="index.html">Главная</a> / <a href="about.html">Контакты</a></div>
+        <h1>Контакты</h1>
+        <div class="info-block">
+          <div class="address">
+            <div class="img">
+              <svg>
+                <use href="img/sprites/sprite.svg#marker"></use>
+              </svg>
+            </div>
+            <div class="text"><span class="title">Адрес:</span><span>119192, гор. Москва, Ломоносовский проспект, д. 43, корп. 2, этаж 5, комната 11</span></div>
+          </div>
+          <div class="time">
+            <div class="img">
+              <svg>
+                <use href="img/sprites/sprite.svg#clock"></use>
+              </svg>
+            </div>
+            <div class="text"><span class="title">Время работы:</span><span>с 9:00 до 18:00 <span>Пн - Пт</span></span></div>
+          </div>
+          <div class="phone">
+            <div class="img">
+              <svg>
+                <use href="img/sprites/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <div class="text"><span class="title">Телефон:</span><a href="tel:+74991439680">+7(499) 143-96-80 (Общий многоканальный)</a><a href="tel:+74991439680">+7(499) 143-96-80 (Отдел кадров)</a></div>
+          </div>
+          <div class="email">
+            <div class="img">
+              <svg>
+                <use href="img/sprites/sprite.svg#envelope"></use>
+              </svg>
+            </div>
+            <div class="text"><span class="title">Почта:</span><a href="mailto:info@tb-l.ru">info@tb-l.ru</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A891de94e5ee28d576d3d30ce76573a33070bae844dc98068bf3492f34b31c21c&amp;amp;width=100%25&amp;amp;height=380&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+      </div>
+    </div>
+    <main>
+      <section class="warehouse">
+        <div class="container">
+          <h2 class="title-h2">Склад в Московской области</h2>
+          <div class="info-block"></div>
+        </div>
+      </section>
+      <div class="cta">
+        <div class="container row">
+          <div class="cta__title title-h2"><span>Нужна консультация?</span><span>Остались вопросы?</span><span>Мы всегда на связи!</span><a href="tel:+74991439680" title="Позвонить на номер 8 (499) 143-96-80">8 (499) 143-96-80</a></div>
+                <div class="form cta__form">
+                  <div class="form__inputs">
+                    <label class="input">
+                      <input data-name type="text" required><span>ФИО</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="text" required><span>Телефон</span>
+                    </label>
+                    <label class="input">
+                      <input data-tel type="email" required><span>Email</span>
+                    </label><small>Я согласен(согласна) на обработку 
+                      <button data-modal="personal" title="Открыть окно политики конфиденциальности">персональных данных</button></small>
+                    <button class="btn">Оставить заявку</button>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+              <div class="navbar footer__navbar"><a class="logo logo-hover navbar__logo" href="/">
+                      <svg>
+                        <use href="./img/sprites/sprite.svg#logo"></use>
+                      </svg><b>ТБЛ</b><span>Транс Бизнеc Логистик</span></a>
+                <nav class="navbar__nav">
+                  <ul class="navbar__menu">
+                    <li>
+                      <button>О компании 
+                        <svg>
+                          <use href="img/sprites/sprite.svg#triangle"></use>
+                        </svg>
+                      </button>
+                      <ul class="popup-menu">
+                        <li class="back">
+                          <button> 
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg><span>Назад</span>
+                          </button>
+                        </li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="#">Сотрудничество</a></li>
+                        <li><a href="autopark.html">Автопарк</a></li>
+                        <li>
+                          <button>Вакансии
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg>
+                          </button>
+                          <ul class="popup-submenu">
+                            <li><a href="logist.html">Логист</a></li>
+                            <li><a href="driver.html">Водитель</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button>Услуги
+                        <svg>
+                          <use href="img/sprites/sprite.svg#triangle"></use>
+                        </svg>
+                      </button>
+                      <ul class="popup-menu">
+                        <li class="back">
+                          <button>
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg><span>Назад</span>
+                          </button>
+                        </li>
+                        <li><a href="tariffs-russia.html">Доставка по России</a></li>
+                        <li><a href="refresher.html">Рефрижераторные перевозки</a></li>
+                        <li><a href="tanker.html">Наливные грузы</a></li>
+                        <li><a href="#.html">Аренда спецтехники</a></li>
+                        <li><a href="#.html">Грузчики</a></li>
+                        <li>
+                          <button>Дополнительные услуги
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg>
+                          </button>
+                          <ul class="popup-submenu">
+                            <li><a href="#">Ответственное хранение</a></li>
+                            <li><a href="#">Страхование</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="tariffs.html">Тарифы</a></li>
+                    <li>
+                      <button>Информация
+                        <svg>
+                          <use href="img/sprites/sprite.svg#triangle"></use>
+                        </svg>
+                      </button>
+                      <ul class="popup-menu">
+                        <li class="back">
+                          <button> 
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg><span>Назад</span>
+                          </button>
+                        </li>
+                        <li><a href="#">Условия оплаты</a></li>
+                        <li><a href="refresher.html">Претензии</a></li>
+                        <li><a href="tanker.html">Документация</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#contacts">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="contacts-block footer__contacts-block"><a class="contacts-block__mail" href="mailto:info@tb-l.ru" title="Написать письмо на: info@tb-l.ru"> 
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#envelope"></use>
+                  </svg><span>info@tb-l.ru</span></a><a class="contacts-block__tel" href="tel:+74991439680" title="Позвонить на номер: 8 (499) 143-96-80">
+                  <svg>
+                    <use href="./img/sprites/sprite.svg#phone"></use>
+                  </svg><span>8 (499) 143-96-80</span></a></div>
+          <div class="footer__buttons">
+            <button class="btn" data-modal="form">Онлайн заявка</button>
+            <button class="btn">Калькулятор</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container"><small>© 2020 ТБ Логистик. Все права защищены</small><a class="footer__bottom-web2" href="https://web2.ru" target="_blank" title="Переход на сайт web2.ru"> 
+            <svg width="24" height="24">
+              <use href="./img/sprites/sprite.svg#web2ru"></use>
+            </svg><span>Разработка сайта web2.ru</span></a></div>
+      </div>
+      <button class="scroll-up">
+        <svg width="12" height="8">
+          <use class="scroll-up__arrow" href="./img/sprites/sprite.svg#angle"></use>
+        </svg>
+      </button>
+    </footer>
+    <script src="./js/vendor.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
