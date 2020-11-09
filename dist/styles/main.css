@@ -1667,7 +1667,7 @@ h2 {
   background-image: url("../img/form-block/bg-partnership.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   position: relative;
   z-index: 0;
   padding: 30px 50px;
@@ -1720,14 +1720,14 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 25%;
-  flex: 0 1 25%;
+  -ms-flex: 0 1 215px;
+  flex: 0 1 215px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 15px;
   max-width: 215px;
+  margin: 0 15px;
 }
 
 .form-block .form-block__form > div > span {
@@ -1742,11 +1742,12 @@ h2 {
 
 .form-block .form-block__form input,
 .form-block .form-block__form textarea {
+  width: 100%;
   height: 40px;
   border: none;
+  padding: 10px 15px;
   border-radius: 2px;
   background-color: #eff1f2;
-  padding: 10px 15px;
 }
 
 .form-block .form-block__form input:focus,
@@ -1766,16 +1767,15 @@ h2 {
   resize: none;
 }
 
-.form-block .form-block__form .region small {
-  margin-top: 30px;
-  display: block;
-}
-
 .form-block .form-block__form .textarea {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 25%;
-  flex: 1 1 25%;
+  -ms-flex: 1 1 460px;
+  flex: 1 1 460px;
   max-width: 460px;
+}
+
+.form-block .form-block__form .small {
+  margin-top: 15px;
 }
 
 .heading.about {
@@ -4989,6 +4989,28 @@ html.fixed .modal-overlay {
 
   .docs button {
     display: none;
+  }
+
+  .form-block .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .form-block .form-block__left {
+    padding: 25px 15px;
+  }
+
+  .form-block .form-block__left::before {
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#58a9ff), to(rgba(88, 169, 255, 0.5)));
+    background: linear-gradient(180deg, #58a9ff 0%, rgba(88, 169, 255, 0.5) 100%);
+  }
+
+  .form-block .form-block__right {
+    padding: 15px;
   }
 
   .heading.about .advantages-panel {
