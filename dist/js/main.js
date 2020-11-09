@@ -511,12 +511,14 @@ const regions = () => {
           markerOffset.top - mapOffset.top - idListHeight + 12
         );
       }
+
       /* Добавляем классы по ховеру */
       $(region).on('mouseenter', function () {
         let idList = '#' + $(this).attr('id') + 'List';
-
-        $(this).addClass('hover');
-        $(idList).addClass('show');
+        if (!$(this).hasClass('disabled')) {
+          $(this).addClass('hover');
+          $(idList).addClass('show');
+        }
       });
 
       /* Убираем классы по ховеру, кроме тултипа */
@@ -537,6 +539,18 @@ const regions = () => {
           $(this).removeClass('show');
         }
       });
+    }
+  });
+
+  $(window).on('load', function () {
+    for (let i = 0; i < region.length; i++) {
+      let idList = '#' + $(region[i]).attr('id') + 'List';
+      let disabledList = $(idList).find('span, p').text();
+
+      if (disabledList == '' || disabledList == ' ') {
+        $(region[i]).addClass('disabled');
+        $(idList).addClass('disabled');
+      }
     }
   });
 };
