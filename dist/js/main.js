@@ -386,8 +386,6 @@ const productGoods = () => {
       nextEl: '.product-goods .swiper-button-next',
       prevEl: '.product-goods .swiper-button-prev',
     },
-    observer: true,
-    observeParents: true,
     breakpoints: {
       // when window width is >= 540px
       540: {
