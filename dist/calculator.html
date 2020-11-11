@@ -6,7 +6,7 @@
     <title>Калькулятор - Транс Бизнес Логистик</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/favicons/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.min.css">
   </head>
   <body>
     <!--header-->
@@ -27,8 +27,7 @@
               </svg><span>Личный кабинет</span>
             </div>
             <div class="header__buttons">
-              <button class="btn" data-modal="form">Онлайн заявка</button>
-              <button class="btn">Калькулятор</button>
+              <button class="btn" data-modal="form">Онлайн заявка</button><a class="btn" href="calculator.html">Калькулятор</a>
             </div>
           </div>
         </div>
@@ -53,19 +52,7 @@
                         </button>
                       </li>
                       <li><a href="about.html">О нас</a></li>
-                      <li><a href="partnership.html">Сотрудничество</a></li>
                       <li><a href="autopark.html">Автопарк</a></li>
-                      <li>
-                        <button>Вакансии
-                          <svg>
-                            <use href="img/sprites/sprite.svg#triangle"></use>
-                          </svg>
-                        </button>
-                        <ul class="popup-submenu">
-                          <li><a href="logist.html">Логист</a></li>
-                          <li><a href="driver.html">Водитель</a></li>
-                        </ul>
-                      </li>
                     </ul>
                   </li>
                   <li>
@@ -85,19 +72,7 @@
                       <li><a href="tariffs-russia.html">Доставка по России</a></li>
                       <li><a href="refresher.html">Рефрижераторные перевозки</a></li>
                       <li><a href="tanker.html">Наливные грузы</a></li>
-                      <li><a href="#.html">Аренда спецтехники</a></li>
-                      <li><a href="#.html">Грузчики</a></li>
-                      <li>
-                        <button>Дополнительные услуги
-                          <svg>
-                            <use href="img/sprites/sprite.svg#triangle"></use>
-                          </svg>
-                        </button>
-                        <ul class="popup-submenu">
-                          <li><a href="#">Ответственное хранение</a></li>
-                          <li><a href="#">Страхование</a></li>
-                        </ul>
-                      </li>
+                      <li><a href="storage.html">Ответственное хранение</a></li>
                     </ul>
                   </li>
                   <li><a href="tariffs.html">Тарифы</a></li>
@@ -115,8 +90,18 @@
                           </svg><span>Назад</span>
                         </button>
                       </li>
-                      <li><a href="#">Условия оплаты</a></li>
-                      <li><a href="#">Претензии</a></li>
+                      <li><a href="partnership.html">Сотрудничество</a></li>
+                      <li>
+                        <button>Вакансии
+                          <svg>
+                            <use href="img/sprites/sprite.svg#triangle"></use>
+                          </svg>
+                        </button>
+                        <ul class="popup-submenu left">
+                          <li><a href="logist.html">Логист</a></li>
+                          <li><a href="driver.html">Водитель</a></li>
+                        </ul>
+                      </li>
                       <li><a href="documentation.html">Документация</a></li>
                     </ul>
                   </li>
@@ -187,22 +172,56 @@
     <!--Автопарк-->
     <div class="heading-small tariffs">
       <div class="container">
-        <div class="broads"><a href="#">Главная</a> / <a href="#">Тарифы</a></div>
-        <h1>Тарифы</h1>
-        <div class="filter"><span>Тип перевозки:</span>
-          <div class="checkboxes">
-                <label class="input-checkbox">
-                  <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Тент</span>
-                </label>
-                <label class="input-checkbox">
-                  <input class="visually-hidden" name="carcase" type="checkbox"><span class="input-checkbox__check"></span><span class="input-checkbox__text">Рефрижератор</span>
-                </label>
+        <div class="broads"><a href="#">Главная</a> / <a href="#">Калькулятор</a></div>
+        <h1>Калькулятор</h1>
+        <div class="calculate">
+          <div class="calculate__form">
+            <label class="calculate__input calculate__from">
+              <svg>
+                <use href="./img/sprites/sprite.svg#marker"></use>
+              </svg><span class="relative">
+                <input type="text" required><span class="placeholder">Откуда</span></span>
+            </label>
+            <div class="calculate__swap">
+              <button class="button-swap">
+                <svg class="reverse">
+                  <use href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+                <svg>
+                  <use href="./img/sprites/sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <label class="calculate__input calculate__to">
+              <svg>
+                <use href="./img/sprites/sprite.svg#marker"></use>
+              </svg><span class="relative">
+                <input type="text" required><span class="placeholder">Куда</span></span>
+            </label>
+            <label class="calculate__input calculate__weight">
+              <svg>
+                <use href="./img/sprites/sprite.svg#weight"></use>
+              </svg><span class="relative">
+                <input type="text" required><span class="placeholder">Вес</span></span><span class="units">Кг</span>
+            </label>
+            <label class="calculate__input calculate__capacity">
+              <svg>
+                <use href="./img/sprites/sprite.svg#cube"></use>
+              </svg><span class="relative">
+                <input type="text" required><span class="placeholder">Обьем</span></span><span class="units">М<sup>3</sup></span>
+            </label>
+            <button class="calculate__submit"><span>Рассчитать</span>
+              <svg>
+                <use href="./img/sprites/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <div class="input-empty"></div>
           </div>
         </div>
       </div>
     </div>
     <main>
-      <section class="section-block about-block">
+      <section class="section-block">
         <div class="container">
           <div class="section-block__img">
             <svg>
@@ -312,19 +331,7 @@
                           </button>
                         </li>
                         <li><a href="about.html">О нас</a></li>
-                        <li><a href="partnership.html">Сотрудничество</a></li>
                         <li><a href="autopark.html">Автопарк</a></li>
-                        <li>
-                          <button>Вакансии
-                            <svg>
-                              <use href="img/sprites/sprite.svg#triangle"></use>
-                            </svg>
-                          </button>
-                          <ul class="popup-submenu">
-                            <li><a href="logist.html">Логист</a></li>
-                            <li><a href="driver.html">Водитель</a></li>
-                          </ul>
-                        </li>
                       </ul>
                     </li>
                     <li>
@@ -344,19 +351,7 @@
                         <li><a href="tariffs-russia.html">Доставка по России</a></li>
                         <li><a href="refresher.html">Рефрижераторные перевозки</a></li>
                         <li><a href="tanker.html">Наливные грузы</a></li>
-                        <li><a href="#.html">Аренда спецтехники</a></li>
-                        <li><a href="#.html">Грузчики</a></li>
-                        <li>
-                          <button>Дополнительные услуги
-                            <svg>
-                              <use href="img/sprites/sprite.svg#triangle"></use>
-                            </svg>
-                          </button>
-                          <ul class="popup-submenu">
-                            <li><a href="#">Ответственное хранение</a></li>
-                            <li><a href="#">Страхование</a></li>
-                          </ul>
-                        </li>
+                        <li><a href="storage.html">Ответственное хранение</a></li>
                       </ul>
                     </li>
                     <li><a href="tariffs.html">Тарифы</a></li>
@@ -374,8 +369,18 @@
                             </svg><span>Назад</span>
                           </button>
                         </li>
-                        <li><a href="#">Условия оплаты</a></li>
-                        <li><a href="#">Претензии</a></li>
+                        <li><a href="partnership.html">Сотрудничество</a></li>
+                        <li>
+                          <button>Вакансии
+                            <svg>
+                              <use href="img/sprites/sprite.svg#triangle"></use>
+                            </svg>
+                          </button>
+                          <ul class="popup-submenu left">
+                            <li><a href="logist.html">Логист</a></li>
+                            <li><a href="driver.html">Водитель</a></li>
+                          </ul>
+                        </li>
                         <li><a href="documentation.html">Документация</a></li>
                       </ul>
                     </li>
@@ -408,7 +413,7 @@
         </svg>
       </button>
     </footer>
-    <script src="./js/vendor.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/main.min.js"></script>
   </body>
 </html>
