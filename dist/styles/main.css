@@ -1214,6 +1214,22 @@ h2 {
   transform: rotate(180deg);
 }
 
+.calculate .button-swap.rotate {
+  /*       @include media("<460px") {
+        transform: rotate(270deg);
+        &:hover {
+          transform: rotate(290deg);
+        }
+      } */
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.calculate .button-swap.rotate:hover {
+  -webkit-transform: rotate(200deg);
+  transform: rotate(200deg);
+}
+
 .calculate .button-swap svg {
   width: 18px;
   height: 8px;
@@ -4443,16 +4459,6 @@ html.fixed .modal-overlay {
 }
 
 @media (min-width: 460px) {
-  .calculate .button-swap.rotate {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-
-  .calculate .button-swap.rotate:hover {
-    -webkit-transform: rotate(200deg);
-    transform: rotate(200deg);
-  }
-
   .calculate__capacity {
     border-left: 1px solid #e5e5e5;
   }
@@ -5808,16 +5814,6 @@ html.fixed .modal-overlay {
     border-top: 1px solid #e5e5e5;
   }
 
-  .calculate .button-swap.rotate {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-
-  .calculate .button-swap.rotate:hover {
-    -webkit-transform: rotate(290deg);
-    transform: rotate(290deg);
-  }
-
   .advantages-block {
     margin: auto -15px -120px;
   }
@@ -5834,6 +5830,10 @@ html.fixed .modal-overlay {
 
   .heading {
     min-height: 600px;
+  }
+
+  .heading.tariffs-russia .title-h1 {
+    font-size: 25px;
   }
 
   .product-card__right {
