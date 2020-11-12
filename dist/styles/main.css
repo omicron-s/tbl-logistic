@@ -1194,11 +1194,19 @@ h2 {
   width: 30px;
   height: 30px;
   margin: auto 0;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
   -webkit-transition: .2s linear;
   transition: .2s linear;
   background-color: #eff1f2;
   border-radius: 50%;
   color: #000;
+}
+
+.calculate .button-swap:hover {
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  opacity: 0.8;
 }
 
 .calculate .button-swap .reverse {
@@ -1230,7 +1238,6 @@ h2 {
   display: flex;
   width: 100%;
   height: 100%;
-  border-radius: 2px;
 }
 
 .calculate__input {
@@ -1294,7 +1301,6 @@ h2 {
 
 .calculate__from {
   position: relative;
-  border-radius: 2px 0 0 2px;
 }
 
 .calculate__capacity svg {
@@ -1321,7 +1327,6 @@ h2 {
   color: #fff;
   background-color: #005bbb;
   font-weight: 700;
-  border-radius: 0 2px 2px 0;
 }
 
 .calculate__submit:hover {
@@ -1868,7 +1873,6 @@ h2 {
   margin: auto 0 -60px;
   color: #000;
   background-color: #fff;
-  border-radius: 2px;
 }
 
 .advantages-block li {
@@ -1966,7 +1970,6 @@ h2 {
   z-index: 1;
   padding: 35px 50px;
   background-color: #005bbb;
-  border-radius: 0 2px 2px 0;
   -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
@@ -4440,17 +4443,6 @@ html.fixed .modal-overlay {
 }
 
 @media (min-width: 460px) {
-  .calculate .button-swap {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-
-  .calculate .button-swap:hover {
-    -webkit-transform: rotate(20deg);
-    transform: rotate(20deg);
-    opacity: 0.8;
-  }
-
   .calculate .button-swap.rotate {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
@@ -4830,7 +4822,6 @@ html.fixed .modal-overlay {
 
   .heading-small.autopark .filter .left {
     border-right: 1px solid #e5e5e5;
-    border-radius: 2px 0 0 2px;
   }
 
   .includes-card {
@@ -4904,7 +4895,6 @@ html.fixed .modal-overlay {
 
   .advantages-block {
     margin: auto -15px -60px;
-    border-radius: 0;
   }
 
   .advantages-block li {
@@ -5220,7 +5210,6 @@ html.fixed .modal-overlay {
     padding: 15px 15px;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
-    border-radius: 0 0 2px 2px;
   }
 
   .heading-small.autopark .filter .filter__submit:focus {
@@ -5805,16 +5794,7 @@ html.fixed .modal-overlay {
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
 
-  .calculate .calculate__from {
-    border-radius: 2px 2px 0 0;
-  }
-
-  .calculate .calculate__submit {
-    border-radius: 0 0 2px 2px;
-  }
-
   .calculate .calculate__swap {
-    border-radius: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -5826,17 +5806,6 @@ html.fixed .modal-overlay {
 
   .calculate .calculate__capacity {
     border-top: 1px solid #e5e5e5;
-  }
-
-  .calculate .button-swap {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
-  .calculate .button-swap:hover {
-    -webkit-transform: rotate(110deg);
-    transform: rotate(110deg);
-    opacity: 0.8;
   }
 
   .calculate .button-swap.rotate {
@@ -5943,7 +5912,6 @@ html.fixed .modal-overlay {
   }
 
   .heading-small.autopark .filter .left {
-    border-radius: 2px 2px 0 0;
     border-bottom: 1px solid #e5e5e5;
   }
 
@@ -5951,7 +5919,6 @@ html.fixed .modal-overlay {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-    border-radius: 0 0 2px 2px;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
@@ -6016,7 +5983,6 @@ html.fixed .modal-overlay {
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
-    border-radius: 0 0 2px 2px;
   }
 
   .calculate .calculate__swap {
@@ -6045,14 +6011,12 @@ html.fixed .modal-overlay {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 32%;
     flex: 1 1 32%;
-    border-radius: 2px 0 0 0;
   }
 
   .calculate .calculate__to {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 32%;
     flex: 1 1 32%;
-    border-radius: 0 2px 0 0;
   }
 
   .calculate .calculate__input {
@@ -6075,7 +6039,6 @@ html.fixed .modal-overlay {
     order: 3;
     justify-self: flex-start;
     border-top: 1px solid #e5e5e5;
-    border-radius: 0 0 0 2px;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
@@ -6088,7 +6051,6 @@ html.fixed .modal-overlay {
     -ms-flex-order: 3;
     order: 3;
     border-top: 1px solid #e5e5e5;
-    border-radius: 0 0 2px 0;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     padding: 0 15px 0 35px;
