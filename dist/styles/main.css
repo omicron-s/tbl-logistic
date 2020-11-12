@@ -1148,6 +1148,10 @@ h2 {
   font-weight: 400;
 }
 
+.advantages__block strong.sign::after {
+  content: "+";
+}
+
 .rf-map {
   position: absolute;
   z-index: -1;
