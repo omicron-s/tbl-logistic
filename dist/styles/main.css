@@ -5051,6 +5051,7 @@ html.fixed .modal-overlay {
     -ms-flex: 1 1 65%;
     flex: 1 1 65%;
     padding: 15px;
+    border-left: none;
   }
 
   .calc__right {
@@ -6078,8 +6079,8 @@ html.fixed .modal-overlay {
     margin-top: 30px;
     margin-bottom: -30px;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 32%;
-    flex: 1 1 32%;
+    -ms-flex: 1 1 31.9%;
+    flex: 1 1 31.9%;
   }
 
   .input-empty {
