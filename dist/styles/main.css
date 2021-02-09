@@ -1175,9 +1175,18 @@ h2 {
   color: #005bbb !important;
 }
 
+.calc {
+  min-height: 700px;
+  background-color: #3a4257;
+}
+
 .calc .container {
   position: relative;
   z-index: 1;
+}
+
+.calc__map {
+  height: 100%;
 }
 
 .calc__block {
@@ -5027,6 +5036,16 @@ html.fixed .modal-overlay {
     display: none;
   }
 
+  .calc {
+    margin: 0 -15px;
+  }
+
+  .calc__block {
+    position: static;
+    margin-top: 70px;
+    padding: 0;
+  }
+
   .calc__left {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 65%;
@@ -5039,6 +5058,8 @@ html.fixed .modal-overlay {
     -ms-flex: 1 1 35%;
     flex: 1 1 35%;
     padding: 15px 20px;
+    border-top: 1px solid #005bbb;
+    border-bottom: 1px solid #005bbb;
   }
 
   .calculate .calculate__submit:focus {
@@ -5253,7 +5274,7 @@ html.fixed .modal-overlay {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    top: 130px;
+    margin-top: 130px;
   }
 
   .cta-work .btn {
