@@ -5897,6 +5897,18 @@ html.fixed .modal-overlay {
 }
 
 @media (max-width: 539px) {
+  .calc__left ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .calc__left ul li {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 30%;
+    flex: 1 1 30%;
+    margin-bottom: 15px;
+  }
+
   .cta__title {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 100%;
@@ -5964,6 +5976,10 @@ html.fixed .modal-overlay {
 
   .rf-map svg {
     display: none;
+  }
+
+  .calc__block {
+    margin-top: 162px;
   }
 
   .calculate {
