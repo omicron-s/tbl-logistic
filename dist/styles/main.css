@@ -1184,6 +1184,10 @@ h2 {
   height: 600px;
 }
 
+.calc__map.active > * {
+  pointer-events: all;
+}
+
 .calc__block {
   display: -webkit-box;
   display: -ms-flexbox;
