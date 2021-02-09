@@ -5054,7 +5054,6 @@ html.fixed .modal-overlay {
     -ms-flex: 1 1 65%;
     flex: 1 1 65%;
     padding: 15px;
-    border-left: none;
   }
 
   .calc__right {
