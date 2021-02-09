@@ -5278,6 +5278,10 @@ html.fixed .modal-overlay {
     margin-top: 130px;
   }
 
+  .calc__left {
+    border-bottom: none;
+  }
+
   .cta-work .btn {
     width: 170px;
   }
