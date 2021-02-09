@@ -1175,10 +1175,6 @@ h2 {
   color: #005bbb !important;
 }
 
-.calc {
-  background-color: #3a4257;
-}
-
 .calc .container {
   position: relative;
   z-index: 1;
@@ -5063,7 +5059,6 @@ html.fixed .modal-overlay {
     border: 1px solid #005bbb;
     padding: 15px 20px;
     border-left: none;
-    background-color: #495470;
   }
 
   .calculate .calculate__submit:focus {
