@@ -5037,10 +5037,6 @@ html.fixed .modal-overlay {
     display: none;
   }
 
-  .calc {
-    margin: 0 -15px;
-  }
-
   .calc__block {
     position: static;
     margin-top: 70px;
@@ -5059,9 +5055,10 @@ html.fixed .modal-overlay {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 35%;
     flex: 1 1 35%;
+    border: 1px solid #005bbb;
     padding: 15px 20px;
-    border-top: 1px solid #005bbb;
-    border-bottom: 1px solid #005bbb;
+    border-left: none;
+    background-color: #495470;
   }
 
   .calculate .calculate__submit:focus {
@@ -5281,6 +5278,15 @@ html.fixed .modal-overlay {
 
   .calc__left {
     border-bottom: none;
+  }
+
+  .calc__right {
+    border-top: none;
+    border-left: 1px solid #005bbb;
+  }
+
+  .calculate .calculate__submit {
+    height: 50% !important;
   }
 
   .cta-work .btn {
@@ -6117,8 +6123,7 @@ html.fixed .modal-overlay {
   }
 
   .calculate .calculate__submit {
-    margin-top: 30px;
-    margin-bottom: -30px;
+    margin-bottom: -60px;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 31.9%;
     flex: 1 1 31.9%;
@@ -6262,7 +6267,7 @@ html.fixed .modal-overlay {
 
   .calculate .calculate__submit {
     z-index: 1;
-    height: 50%;
+    height: 100%;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
   }
