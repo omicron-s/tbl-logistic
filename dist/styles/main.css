@@ -5040,7 +5040,7 @@ html.fixed .modal-overlay {
   }
 
   .calc__map {
-    height: 570px;
+    display: none;
   }
 
   .calc__block {
@@ -5272,10 +5272,6 @@ html.fixed .modal-overlay {
 
   .advantages__block strong {
     font-size: 35px;
-  }
-
-  .calc__map {
-    height: 460px;
   }
 
   .calc__block {
@@ -5997,10 +5993,6 @@ html.fixed .modal-overlay {
 
   .rf-map svg {
     display: none;
-  }
-
-  .calc__map {
-    height: 360px;
   }
 
   .calc__block {
