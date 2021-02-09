@@ -1261,6 +1261,9 @@ h2 {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: auto;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .calc__left-checks .input-checkbox {
@@ -5056,8 +5059,8 @@ html.fixed .modal-overlay {
 
   .calc__right {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 35%;
-    flex: 1 1 35%;
+    -ms-flex: 1 1 32.8%;
+    flex: 1 1 32.8%;
     border: 1px solid #005bbb;
     padding: 15px 20px;
     border-left: none;
@@ -6001,7 +6004,7 @@ html.fixed .modal-overlay {
   }
 
   .calc__block {
-    margin-top: 162px;
+    margin-top: 177px;
   }
 
   .calc__button {
@@ -6023,7 +6026,7 @@ html.fixed .modal-overlay {
 
   .calculate {
     height: 300px;
-    margin: auto -15px -163px;
+    margin: auto 0 -163px;
   }
 
   .calculate .calculate__form {
@@ -6031,7 +6034,6 @@ html.fixed .modal-overlay {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    max-width: 260px;
     margin: 0 auto;
     -webkit-box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
     box-shadow: 0 20px 28px rgba(91, 86, 86, 0.12);
@@ -6126,18 +6128,14 @@ html.fixed .modal-overlay {
   }
 
   .calculate {
-    margin: auto -15px -60px;
-  }
-
-  .calculate .calculate__form {
-    max-width: 804px;
+    margin: auto 0 -60px;
   }
 
   .calculate .calculate__submit {
     margin-bottom: -60px;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 31.9%;
-    flex: 1 1 31.9%;
+    -ms-flex: 1 1 32%;
+    flex: 1 1 32%;
   }
 
   .input-empty {
@@ -6225,8 +6223,28 @@ html.fixed .modal-overlay {
     padding: 160px 0 25px;
   }
 
-  .calculate .calculate__form {
-    max-width: 546px;
+  .calculate .calculate__weight {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 1 35% !important;
+    flex: 1 1 35% !important;
+  }
+
+  .calculate .calculate__capacity {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 1 35% !important;
+    flex: 1 1 35% !important;
+  }
+
+  .calculate .calculate__from {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 1 44% !important;
+    flex: 1 1 44% !important;
+  }
+
+  .calculate .calculate__to {
+    -webkit-box-flex: 1 !important;
+    -ms-flex: 1 1 44% !important;
+    flex: 1 1 44% !important;
   }
 
   .calculate .calculate__submit {
@@ -6262,14 +6280,14 @@ html.fixed .modal-overlay {
 
   .calculate .calculate__from {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 32%;
-    flex: 1 1 32%;
+    -ms-flex: 1 1 29%;
+    flex: 1 1 29%;
   }
 
   .calculate .calculate__to {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 32%;
-    flex: 1 1 32%;
+    -ms-flex: 1 1 29%;
+    flex: 1 1 29%;
   }
 
   .calculate .calculate__input {
@@ -6285,8 +6303,8 @@ html.fixed .modal-overlay {
 
   .calculate .calculate__weight {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 34%;
-    flex: 1 1 34%;
+    -ms-flex: 1 1 31.1%;
+    flex: 1 1 31.1%;
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
@@ -6298,8 +6316,8 @@ html.fixed .modal-overlay {
 
   .calculate .calculate__capacity {
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 34%;
-    flex: 1 1 34%;
+    -ms-flex: 1 1 31.1%;
+    flex: 1 1 31.1%;
     -webkit-box-ordinal-group: 4;
     -ms-flex-order: 3;
     order: 3;
